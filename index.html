@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>
+:root { color-scheme: light; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+body { margin: 0; font: 14px system-ui, sans-serif; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+</style>
+<title>Euclidean Ear Test</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: the card sits on the left, face-down until the rhythm is found, with a live ring that follows the sliders.
+   Listening, dials and scoring stack on the right; everything folds to one column on phones. */
+:root {
+  --bg: #e5e4ea;
+  --surface: #f4f3f8;
+  --ink: #14152b;
+  --ink-2: #4b4d69;
+  --line: #c6c5d4;
+  --accent: #2d4a9e;
+  --accent-ink: #ffffff;
+  --accent-soft: #d8ddf2;
+  --good: #1d6f49;
+  --bad: #a3303c;
+  --shadow: rgba(20, 21, 43, 0.28);
+  --f-display: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
+  --f-body: 'Barlow', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --f-mono: 'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d0e1b; --surface: #171933; --ink: #ecebf5; --ink-2: #a4a6c6; --line: #2b2e52;
+    --accent: #8aa3ff; --accent-ink: #0d0e1b; --accent-soft: #252b57;
+    --good: #5fd6a0; --bad: #ff8590; --shadow: rgba(0, 0, 0, 0.6);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d0e1b; --surface: #171933; --ink: #ecebf5; --ink-2: #a4a6c6; --line: #2b2e52;
+  --accent: #8aa3ff; --accent-ink: #0d0e1b; --accent-soft: #252b57;
+  --good: #5fd6a0; --bad: #ff8590; --shadow: rgba(0, 0, 0, 0.6);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 15px/1.5 var(--f-body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 20px 48px;
+}
+button, input { font: inherit; color: inherit; }
+.app { max-width: 1020px; margin: 0 auto; }
+
+/* header + scoreboard */
+.masthead { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 14px 24px; padding-bottom: 16px; border-bottom: 1.5px solid var(--ink); }
+.brand { min-width: 0; }
+h1 { margin: 0; font: 700 clamp(30px, 6vw, 40px)/1 var(--f-display); letter-spacing: 0.03em; text-transform: uppercase; text-wrap: balance; }
+.brand p { margin: 6px 0 0; color: var(--ink-2); }
+.score { display: flex; align-items: flex-end; gap: 22px; }
+.stat { display: flex; flex-direction: column; align-items: flex-start; min-width: 44px; }
+.lbl { font: 500 11px/1 var(--f-body); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); }
+.stat .val { font: 600 34px/1.05 var(--f-display); font-variant-numeric: tabular-nums; margin-top: 4px; }
+.stat .val.bump { animation: bump 0.45s ease-out; }
+@keyframes bump { 0% { transform: scale(1); color: var(--accent); } 40% { transform: scale(1.25); color: var(--accent); } 100% { transform: scale(1); } }
+.link { background: none; border: 0; padding: 4px 0; color: var(--ink-2); font-size: 13px; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.link:hover { color: var(--ink); }
+
+/* two-column stage */
+.stage { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: 36px; align-items: start; padding-top: 28px; }
+.cardcol { position: sticky; top: 16px; min-width: 0; }
+.cardwrap { perspective: 1400px; width: 100%; }
+.card {
+  position: relative; aspect-ratio: 732 / 1039; transform-style: preserve-3d;
+  border-radius: 19.1% / 13.5%;
+  box-shadow: 0 18px 34px -12px var(--shadow);
+  transition: transform 0.9s cubic-bezier(0.2, 0.75, 0.25, 1);
+}
+.card.flipped { transform: rotateY(180deg); }
+.face { position: absolute; inset: 0; border-radius: 19.1% / 13.5%; overflow: hidden; background: #fff; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+
+/* card back: live ring that mirrors the real cards' diagram language */
+.back .inner {
+  position: absolute; left: 4.1%; right: 4.1%; top: 3.66%; bottom: 3.66%;
+  border-radius: 16.4% / 11.4%; overflow: hidden; container-type: inline-size;
+  background:
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.07) 0 1px, transparent 1px 5px),
+    url('cards/back.webp') center / cover no-repeat, #231d57;
+  color: #fff;
+}
+.back .nm { position: absolute; left: 0; right: 0; font: 500 6.4cqw/1 var(--f-display); letter-spacing: 0.22em; text-indent: 0.22em; text-align: center; opacity: 0.9; }
+.back .nm.up { top: 5.4%; }
+.back .nm.dn { bottom: 5.4%; transform: rotate(180deg); }
+.badge { position: absolute; width: 15%; aspect-ratio: 1; border-radius: 50%; background: #fff; color: #111; display: grid; place-items: center; font: 600 5.4cqw/1 var(--f-display); letter-spacing: 0.02em; font-variant-numeric: tabular-nums; }
+.badge.tl { left: 1.8%; top: 1.2%; }
+.badge.br { right: 1.8%; bottom: 1.2%; transform: rotate(180deg); }
+#ring { position: absolute; left: 0; top: 50%; width: 100%; height: auto; transform: translateY(-50%); overflow: visible; }
+#ring .track { fill: none; stroke: #fff; stroke-width: 15; }
+#ring .pulse { fill: #111; stroke: #fff; stroke-width: 1.4; }
+#ring .rest { fill: #fff; stroke: #111; stroke-width: 1; }
+
+.front { transform: rotateY(180deg); background: #fff; }
+.front img { display: block; width: 100%; height: 100%; max-width: none; }
+.front .nocard { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; padding: 12%; background: linear-gradient(160deg, #26388a, #b6808d); color: #fff; font: 700 11cqw/1 var(--f-display); letter-spacing: 0.06em; }
+
+/* panel */
+.panel { min-width: 0; display: flex; flex-direction: column; gap: 22px; }
+.player { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 16px; }
+.playbtn { width: 68px; height: 68px; border-radius: 50%; border: 0; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; cursor: pointer; transition: transform 0.12s; }
+.playbtn:hover { transform: scale(1.04); }
+.playbtn svg { width: 28px; height: 28px; fill: currentColor; }
+.playbtn .i-pause { display: none; }
+.playbtn.playing .i-play { display: none; }
+.playbtn.playing .i-pause { display: block; }
+.pmeta { min-width: 0; }
+.clipno { font: 600 22px/1.1 var(--f-display); letter-spacing: 0.04em; text-transform: uppercase; }
+.time { color: var(--ink-2); font: 400 13px/1.4 var(--f-mono); margin-top: 4px; font-variant-numeric: tabular-nums; }
+.worth { text-align: right; display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+.pill { font: 600 26px/1 var(--f-display); font-variant-numeric: tabular-nums; padding: 5px 12px; border: 1.5px solid var(--ink); border-radius: 999px; min-width: 56px; text-align: center; }
+.worth .sub { font-size: 12px; color: var(--ink-2); max-width: 160px; line-height: 1.3; }
+
+.dial { background: var(--surface); border: 1.5px solid var(--line); border-radius: 14px; padding: 18px 18px 16px; display: flex; flex-direction: column; gap: 6px; }
+.dial.shake { animation: shake 0.4s; }
+@keyframes shake { 0%,100% { transform: translateX(0); } 20% { transform: translateX(-7px); } 40% { transform: translateX(6px); } 60% { transform: translateX(-4px); } 80% { transform: translateX(3px); } }
+.row { display: grid; grid-template-columns: 62px minmax(0, 1fr) 58px; align-items: center; gap: 12px; }
+.row label { display: flex; flex-direction: column; line-height: 1; }
+.row label b { font: 700 34px/1 var(--f-display); }
+.row label small { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); margin-top: 3px; }
+.row output { font: 600 40px/1 var(--f-display); text-align: right; font-variant-numeric: tabular-nums; }
+/* both sliders share one pitch (15 positions each), so k's last allowed notch sits right under n's thumb */
+.slider { position: relative; height: 38px; --f: 0; --lim: 1; }
+.slider .bar, .slider .fill, .slider .dead { position: absolute; top: 50%; height: 6px; margin-top: -3px; border-radius: 3px; pointer-events: none; }
+.slider .bar { left: 13px; right: 13px; background: var(--line); }
+.slider .fill { left: 13px; width: calc((100% - 26px) * var(--f)); background: var(--accent); }
+.slider .dead { left: calc(13px + (100% - 26px) * var(--lim)); right: 13px; background: repeating-linear-gradient(90deg, transparent 0 4px, var(--surface) 4px 8px); }
+.slider .ticks { position: absolute; left: 13px; right: 13px; top: 50%; height: 0; pointer-events: none; }
+.tick { position: absolute; top: -8px; width: 2px; height: 16px; margin-left: -1px; border-radius: 1px; background: var(--ink-2); opacity: 0.5; }
+.tick.off { opacity: 0.18; }
+.slider:has(input:disabled) { opacity: 0.5; }
+input[type=range] { position: relative; z-index: 1; -webkit-appearance: none; appearance: none; width: 100%; height: 38px; background: transparent; margin: 0; cursor: pointer; }
+input[type=range]::-webkit-slider-runnable-track { height: 6px; background: transparent; }
+input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; box-sizing: border-box; width: 26px; height: 26px; margin-top: -10px; border-radius: 50%; background: var(--surface); border: 3px solid var(--accent); }
+input[type=range]::-moz-range-track { height: 6px; background: transparent; }
+input[type=range]::-moz-range-progress { background: transparent; }
+input[type=range]::-moz-range-thumb { box-sizing: border-box; width: 26px; height: 26px; border-radius: 50%; background: var(--surface); border: 3px solid var(--accent); }
+input[type=range]:disabled { cursor: not-allowed; }
+input[type=range]:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+.readout { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 12px; margin-top: 6px; }
+.eq { font: 500 20px/1 var(--f-mono); margin-right: auto; letter-spacing: 0.02em; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 18px; border-radius: 10px; border: 1.5px solid var(--ink); background: transparent; font: 600 15px/1.1 var(--f-body); cursor: pointer; }
+.btn:hover:not(:disabled) { background: var(--accent-soft); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.btn.primary:hover:not(:disabled) { background: var(--accent); filter: brightness(1.1); }
+.btn:disabled { border-style: dashed; border-color: var(--line); color: var(--ink-2); background: transparent; cursor: not-allowed; opacity: 0.8; }
+.btn.primary:disabled { background: transparent; color: var(--ink-2); }
+.btn svg { width: 16px; height: 16px; fill: currentColor; }
+.btn:focus-visible, .playbtn:focus-visible, .link:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.feedback { margin: 0; min-height: 1.5em; font-weight: 500; }
+.feedback.bad { color: var(--bad); }
+.feedback.good { color: var(--good); }
+
+.help { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.misses { display: flex; gap: 14px; align-items: flex-start; padding: 0 4px 18px; margin-left: auto; }
+.dot { position: relative; width: 12px; height: 12px; border-radius: 50%; border: 1.5px solid var(--ink-2); }
+.dot.on { background: var(--bad); border-color: var(--bad); }
+.dot[data-label]::after { content: attr(data-label); position: absolute; top: 18px; left: 50%; transform: translateX(-50%); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); white-space: nowrap; }
+.nextrow { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; }
+.locknote { margin: 0; font-size: 13px; color: var(--ink-2); }
+
+/* reveal */
+.reveal { border-top: 1.5px solid var(--ink); padding-top: 16px; display: flex; flex-direction: column; gap: 10px; }
+.eyebrow { display: flex; flex-wrap: wrap; gap: 4px 14px; font: 400 13px/1.4 var(--f-mono); color: var(--ink-2); }
+.reveal h2 { margin: 0; font: 700 clamp(40px, 8vw, 60px)/0.95 var(--f-display); letter-spacing: 0.03em; text-wrap: balance; overflow-wrap: anywhere; }
+.chip { align-self: flex-start; margin: 0; padding: 5px 12px; border-radius: 999px; font: 600 14px/1.2 var(--f-body); border: 1.5px solid currentColor; }
+.chip.good { color: var(--good); }
+.chip.bad { color: var(--bad); }
+.reveal p.desc { margin: 0; max-width: 62ch; }
+.reveal dl { margin: 0; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 6px 16px; }
+.reveal dt { font: 500 11px/1.9 var(--f-body); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); }
+.reveal dd { margin: 0; overflow-wrap: anywhere; }
+.mono { font-family: var(--f-mono); }
+.nav { display: flex; gap: 20px; margin-top: 12px; }
+.nav a { font: 600 13px/1 var(--f-body); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); text-decoration: none; padding: 6px 0; border-bottom: 2px solid transparent; }
+.nav a:hover { color: var(--ink); }
+.nav a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--accent); }
+.nav a:focus-visible, .links a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.about { padding-top: 28px; }
+.about-body { max-width: 62ch; display: flex; flex-direction: column; gap: 14px; }
+.about h2 { margin: 0; font: 700 clamp(40px, 8vw, 56px)/0.95 var(--f-display); letter-spacing: 0.03em; text-transform: uppercase; }
+.about p { margin: 0; }
+.about .lead { font-size: 18px; }
+.about h3 { margin: 14px 0 0; font: 600 13px/1 var(--f-body); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); }
+.links { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.links li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; }
+.links a { font: 700 28px/1.1 var(--f-display); letter-spacing: 0.03em; text-transform: uppercase; color: var(--accent); text-underline-offset: 4px; }
+.links a.soon { color: var(--ink-2); text-decoration: none; opacity: 0.7; cursor: default; }
+.links span { color: var(--ink-2); }
+.syl { display: inline-block; margin-right: 0.4em; color: var(--ink-2); letter-spacing: 0.02em; }
+.syl.p { color: var(--ink); font-weight: 700; }
+.syl.r { opacity: 0.55; }
+.rules { margin: 0; font-size: 13px; color: var(--ink-2); max-width: 62ch; }
+
+@media (max-width: 780px) {
+  .stage { grid-template-columns: minmax(0, 1fr); gap: 24px; padding-top: 22px; }
+  .cardcol { position: static; width: min(100%, 250px); margin-inline: auto; }
+  .player { grid-template-columns: auto minmax(0, 1fr); }
+  .worth { grid-column: 1 / -1; flex-direction: row; align-items: center; justify-content: flex-start; gap: 12px; text-align: left; }
+  .worth .sub { max-width: none; }
+  .misses { margin-left: 0; width: 100%; padding-bottom: 20px; }
+  .dial { padding: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card { transition: none; }
+  .stat .val.bump, .dial.shake { animation: none; }
+  .playbtn { transition: none; }
+}
+</style>
+</head>
+<body>
+
+<div class="app">
+  <header class="masthead">
+    <div class="brand">
+      <h1>Euclidean Ear Test</h1>
+      <p>Listen to the loop, then dial in n and k.</p>
+      <nav class="nav" aria-label="Pages"><a href="#play" id="navPlay">Play</a><a href="#about" id="navAbout">About</a></nav>
+    </div>
+    <div class="score" aria-label="Scoreboard">
+      <div class="stat"><span class="lbl">Score</span><span class="val" id="score">0</span></div>
+      <div class="stat"><span class="lbl">Streak</span><span class="val" id="streak">0</span></div>
+      <div class="stat"><span class="lbl">Best</span><span class="val" id="best">0</span></div>
+      <button class="link" id="reset" type="button">New game</button>
+    </div>
+  </header>
+
+  <main class="stage" id="viewPlay">
+    <section class="cardcol" aria-label="Rhythm card">
+      <div class="cardwrap">
+        <div class="card" id="card">
+          <div class="face back" aria-hidden="true">
+            <div class="inner">
+              <div class="nm up">UNKNOWN</div>
+              <div class="nm dn">UNKNOWN</div>
+              <div class="badge tl" id="badgeTL">3,8</div>
+              <div class="badge br" id="badgeBR">3,8</div>
+              <svg id="ring" viewBox="0 0 100 100" focusable="false">
+                <g id="ringNodes"></g>
+              </svg>
+            </div>
+          </div>
+          <div class="face front" id="front"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="player">
+        <button class="playbtn" id="play" type="button" aria-label="Start the first clip">
+          <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.4-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></svg>
+          <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="5.5" y="4" width="4.5" height="16" rx="1"/><rect x="14" y="4" width="4.5" height="16" rx="1"/></svg>
+        </button>
+        <div class="pmeta">
+          <div class="clipno" id="clipNo">Ready</div>
+          <div class="time"><span id="elapsed">0:00</span> listening</div>
+        </div>
+        <div class="worth">
+          <span class="pill" id="worth" aria-label="Points available now">+3</span>
+          <span class="sub" id="worthSub">Speed bonus starts when the clip plays.</span>
+        </div>
+      </div>
+
+      <div class="dial" id="dial">
+        <div class="row">
+          <label for="k"><b>k</b><small>pulses</small></label>
+          <div class="slider"><div class="bar"></div><div class="fill"></div><div class="dead"></div><div class="ticks" id="kTicks"></div>
+            <input type="range" id="k" min="1" max="15" step="1" value="3"></div>
+          <output id="kOut" for="k">3</output>
+        </div>
+        <div class="row">
+          <label for="n"><b>n</b><small>steps</small></label>
+          <div class="slider"><div class="bar"></div><div class="fill"></div><div class="dead"></div><div class="ticks" id="nTicks"></div>
+            <input type="range" id="n" min="2" max="16" step="1" value="8"></div>
+          <output id="nOut" for="n">8</output>
+        </div>
+        <div class="readout">
+          <span class="eq" id="eq">E(3,8)</span>
+          <button class="btn primary" id="check" type="button" disabled>Check</button>
+        </div>
+      </div>
+
+      <p class="feedback" id="feedback" role="status" aria-live="polite">Press play to hear the first clip.</p>
+
+      <div class="help">
+        <button class="btn" id="hint" type="button" disabled>Hint: show n</button>
+        <button class="btn" id="giveup" type="button" disabled>Give up</button>
+        <div class="misses" id="misses" aria-label="Misses so far"></div>
+      </div>
+
+      <div class="nextrow">
+        <button class="btn primary" id="next" type="button" disabled aria-describedby="lockNote">
+          <svg id="lockIcon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10V8a5 5 0 0 1 10 0v2h1a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h1zm2 0h6V8a3 3 0 0 0-6 0v2z"/></svg>
+          <span id="nextLabel">Next clip</span>
+        </button>
+        <p class="locknote" id="lockNote">Unlocks when n and k match the clip.</p>
+      </div>
+
+      <article class="reveal" id="reveal" hidden aria-live="polite">
+        <div class="eyebrow"><span id="rvEq"></span><span id="rvTitle"></span></div>
+        <h2 id="rvName"></h2>
+        <p class="chip" id="rvChip"></p>
+        <p class="desc" id="rvDesc" hidden></p>
+        <dl>
+          <dt id="rvMnLbl">Mnemonic</dt><dd id="rvMn"></dd>
+        </dl>
+      </article>
+
+      <p class="rules">Right answer +1. Under 10 s listening adds +2, under 25 s adds +1. A hint removes the speed bonus. The hint opens after 3 misses and giving up after 5. Giving up, or letting a clip loop three times (6 minutes), costs 1 point and the score never drops below 0. Rotations of a rhythm count as the same rhythm.</p>
+    </section>
+  </main>
+
+  <section class="about" id="viewAbout" hidden aria-label="About">
+    <div class="about-body">
+      <h2>About</h2>
+      <p class="lead">A listening game. Each round plays a two-minute loop from the albums on Bandcamp, and you work out its Euclidean rhythm: how many steps it divides into (n) and how many of them carry a pulse (k).</p>
+      <p>A Euclidean rhythm E(k,n) spreads k pulses as evenly as it can over n steps. E(3,8) is <span class="mono">x..x..x.</span> and E(5,8) is <span class="mono">x.xx.xx.</span> Any rotation of a pattern is the same rhythm, so the sliders only ask for k and n.</p>
+      <p>Every rhythm is a card in the deck, named after a figure from Romanian folklore and mythology. Solve the clip and the card turns over, with a few lines on who it is and a mnemonic to say along with the loop: one syllable per step, capitals where the pulses fall.</p>
+      <h3>Elsewhere</h3>
+      <ul class="links">
+        <li><a id="lnkBandcamp">Bandcamp</a><span>The albums these clips come from, and the physical card deck.</span></li>
+        <li><a id="lnkSubstack">Substack</a><span>Essays and notes.</span></li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+<script>
+(() => {
+  'use strict';
+  const $ = (id) => document.getElementById(id);
+  const el = {
+    card: $('card'), front: $('front'), ringNodes: $('ringNodes'),
+    badgeTL: $('badgeTL'), badgeBR: $('badgeBR'),
+    play: $('play'), clipNo: $('clipNo'), elapsed: $('elapsed'), worth: $('worth'), worthSub: $('worthSub'),
+    n: $('n'), k: $('k'), nTicks: $('nTicks'), kTicks: $('kTicks'), nOut: $('nOut'), kOut: $('kOut'), eq: $('eq'), dial: $('dial'),
+    check: $('check'), hint: $('hint'), giveup: $('giveup'), next: $('next'),
+    nextLabel: $('nextLabel'), lockIcon: $('lockIcon'), lockNote: $('lockNote'),
+    feedback: $('feedback'), misses: $('misses'),
+    score: $('score'), streak: $('streak'), best: $('best'), reset: $('reset'),
+    reveal: $('reveal'), rvEq: $('rvEq'), rvTitle: $('rvTitle'), rvName: $('rvName'), rvChip: $('rvChip'),
+    rvDesc: $('rvDesc'), rvMnLbl: $('rvMnLbl'), rvMn: $('rvMn'),
+  };
+
+  const TIERS = [[10000, 2], [25000, 1]];   // [listening time limit in ms, speed bonus]
+  const HINT_AT = 3, GIVEUP_AT = 5;
+  const MAX_LOOPS = 3;                        // a clip that loops this many times counts as a give-up
+  const BEST_KEY = 'euclidean-ear-test-best';
+  const LINKS = { bandcamp: 'https://radu.bandcamp.com', substack: 'https://rvdu.substack.com' };
+
+  const S = {
+    rhythms: [], clips: [], queue: [], lastFile: null, loops: 0, lastT: 0,
+    cur: null, phase: 'idle',              // idle | guessing | revealed
+    misses: 0, hinted: false, error: false,
+    score: 0, streak: 0, best: 0, clipNo: 0,
+    ms: 0, since: null, finalMs: 0, delta: 0,
+  };
+
+  /* ---------- rhythm maths ---------- */
+  function pattern(k, n) {
+    const out = [];
+    for (let i = 0; i < n; i++) out.push((i * k) % n < k);   // Euclidean necklace, rotation fixed so step 0 is a pulse
+    return out;
+  }
+  function gapsOf(k, n) {
+    const on = [];
+    pattern(k, n).forEach((v, i) => { if (v) on.push(i); });
+    const g = on.map((p, i) => ((on[(i + 1) % on.length] - p + n) % n) || n);
+    let best = g;
+    const cmp = (a, b) => { for (let i = 0; i < a.length; i++) if (a[i] !== b[i]) return a[i] - b[i]; return 0; };
+    for (let r = 1; r < g.length; r++) {
+      const rot = g.slice(r).concat(g.slice(0, r));
+      if (cmp(rot, best) > 0) best = rot;
+    }
+    return best;
+  }
+  const syllables = (gaps) => gaps.map((x) => ['TA'].concat(Array(x - 1).fill('ka')).join(' ')).join('  ·  ');
+  const shuffle = (a) => { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+  const fmt = (ms) => { const s = Math.floor(ms / 1000); return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); };
+
+  /* ---------- the ring on the card back ---------- */
+  const NS = 'http://www.w3.org/2000/svg';
+  function nodePos(i, n) {
+    const a = -Math.PI / 2 + (i * 2 * Math.PI) / n;
+    return [50 + 33 * Math.cos(a), 50 + 33 * Math.sin(a)];
+  }
+  function drawRing(k, n) {
+    const pat = pattern(k, n);
+    let h = '<circle class="track" cx="50" cy="50" r="33"></circle>';
+    for (let i = 0; i < n; i++) {
+      const [x, y] = nodePos(i, n);
+      h += pat[i]
+        ? `<circle class="pulse" cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" r="5.6"></circle>`
+        : `<circle class="rest" cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" r="2.3"></circle>`;
+    }
+    el.ringNodes.innerHTML = h;
+  }
+
+  /* ---------- guess state ---------- */
+  const getGuess = () => ({ n: +el.n.value, k: +el.k.value });
+  function paintSlider(inp, lim) {
+    const f = (+inp.value - +inp.min) / (+inp.max - +inp.min);
+    inp.parentElement.style.setProperty('--f', f);
+    inp.parentElement.style.setProperty('--lim', lim);
+  }
+  function buildTicks(box, lo, hi) {
+    let h = '';
+    for (let v = lo; v <= hi; v++) h += `<span class="tick" data-v="${v}" style="left:${(((v - lo) / (hi - lo)) * 100).toFixed(3)}%"></span>`;
+    box.innerHTML = h;
+  }
+  function syncK() {                               // k keeps its full-length track; values above n-1 are out of reach
+    const n = +el.n.value;
+    if (+el.k.value > n - 1) el.k.value = String(n - 1);
+    if (+el.k.value < 1) el.k.value = '1';
+  }
+  function renderGuess() {
+    syncK();
+    const { n, k } = getGuess();
+    el.nOut.textContent = n; el.kOut.textContent = k;
+    el.eq.textContent = `E(${k},${n})`;
+    el.badgeTL.textContent = el.badgeBR.textContent = `${k},${n}`;
+    paintSlider(el.n, 1);
+    paintSlider(el.k, (n - 1 - +el.k.min) / (+el.k.max - +el.k.min));
+    el.kTicks.querySelectorAll('.tick').forEach((t) => t.classList.toggle('off', +t.dataset.v > n - 1));
+    drawRing(k, n);
+  }
+  function setGuess(k, n) { el.n.value = String(n); syncK(); el.k.value = String(k); renderGuess(); }
+
+  /* ---------- main audio + listening clock ---------- */
+  const audio = new Audio();
+  audio.loop = true; audio.preload = 'auto';
+  function stopClock() {
+    if (S.since !== null) { if (S.phase === 'guessing') S.ms += performance.now() - S.since; S.since = null; }
+  }
+  const elapsed = () => (S.phase === 'guessing' ? S.ms + (S.since !== null ? performance.now() - S.since : 0) : S.finalMs);
+  audio.addEventListener('playing', () => { if (S.since === null) S.since = performance.now(); el.play.classList.add('playing'); setPlayLabel(); });
+  audio.addEventListener('pause', () => { stopClock(); el.play.classList.remove('playing'); setPlayLabel(); });
+  audio.addEventListener('waiting', stopClock);
+  audio.addEventListener('timeupdate', () => {          // a drop in position means the loop wrapped round
+    const t = audio.currentTime;
+    if (S.phase === 'guessing' && !S.error && t + 0.5 < S.lastT && ++S.loops >= MAX_LOOPS) timeUp();
+    S.lastT = t;
+  });
+  audio.addEventListener('error', () => {
+    if (!S.cur) return;
+    S.error = true; stopClock();
+    say('This clip would not load. Skip to the next one.', 'bad');
+    render();
+  });
+  function setPlayLabel() {
+    const playing = !audio.paused && S.phase !== 'idle';
+    el.play.setAttribute('aria-label', S.phase === 'idle' ? 'Start the first clip' : playing ? 'Pause the clip' : 'Play the clip');
+  }
+
+  /* ---------- queue: one shuffle of every clip, reshuffled when it runs out ---------- */
+  function pickClip() {
+    if (!S.queue.length) {
+      S.queue = shuffle(S.clips.slice());
+      if (S.queue.length > 1 && S.queue[S.queue.length - 1].v.file === S.lastFile) S.queue.unshift(S.queue.pop());
+    }
+    const c = S.queue.pop(); S.lastFile = c.v.file; return c;
+  }
+
+  /* ---------- game flow ---------- */
+  function say(msg, kind) { el.feedback.textContent = msg; el.feedback.className = 'feedback' + (kind ? ' ' + kind : ''); }
+
+  function startClip() {
+    if (!S.rhythms.length) return;
+    const { r, v } = pickClip();
+    S.cur = { r, v }; S.phase = 'guessing'; S.misses = 0; S.hinted = false; S.error = false;
+    S.ms = 0; S.since = null; S.finalMs = 0; S.delta = 0; S.loops = 0; S.lastT = 0; S.clipNo++;
+    el.n.disabled = false;
+    el.reveal.hidden = true;
+    el.card.classList.remove('flipped');
+    if (r.card) { const im = new Image(); im.src = r.card; }   // warm the cache so the flip is instant
+    audio.src = v.file.split('/').map(encodeURIComponent).join('/');   // each part encoded, so # ? % and non-Latin letters are safe
+    const p = audio.play();
+    if (p && p.catch) p.catch(() => say('Press play to hear the clip.'));
+    say('Listening. Find the number of steps and pulses in the loop.');
+    render();
+  }
+
+  function worthAt(ms) {
+    let bonus = 0;
+    if (!S.hinted) for (const [lim, b] of TIERS) { if (ms <= lim) { bonus = b; break; } }
+    return { base: 1, bonus, total: 1 + bonus };
+  }
+
+  function check() {
+    if (S.phase !== 'guessing' || S.error) return;
+    const g = getGuess(), t = S.cur.r;
+    if (g.n === t.n && g.k === t.k) return solve();
+    S.misses++;
+    el.dial.classList.remove('shake'); void el.dial.offsetWidth; el.dial.classList.add('shake');
+    let msg = 'Not quite. Listen again.';
+    if (S.misses === HINT_AT) msg = 'Not quite. The hint is now available.';
+    if (S.misses === GIVEUP_AT) msg = 'Not quite. You can give up and see the card.';
+    say(msg, 'bad');
+    render();
+  }
+
+  function solve() {
+    const ms = elapsed(), w = worthAt(ms);
+    S.finalMs = ms; S.since = null; S.phase = 'revealed';
+    S.score += w.total; S.delta = w.total;
+    S.streak = S.hinted ? 0 : S.streak + 1;
+    if (S.score > S.best) { S.best = S.score; try { localStorage.setItem(BEST_KEY, String(S.best)); } catch (e) {} }
+    say('That is the rhythm.', 'good');
+    reveal({ kind: 'solved', w, ms });
+  }
+
+  function giveUp() {
+    if (S.phase !== 'guessing' || S.misses < GIVEUP_AT || S.error) return;
+    const lost = Math.min(1, S.score);
+    S.score -= lost; S.delta = -lost; S.streak = 0;
+    S.finalMs = elapsed(); S.since = null; S.phase = 'revealed';
+    setGuess(S.cur.r.k, S.cur.r.n);
+    say('Revealed. Listen to it with the card in front of you.');
+    reveal({ kind: 'gaveup', lost });
+  }
+
+  function timeUp() {
+    const lost = Math.min(1, S.score);
+    S.score -= lost; S.streak = 0;
+    startClip();
+    say(lost ? 'The last clip ran out of loops: −1. Here is the next one.' : 'The last clip ran out of loops. Here is the next one.');
+  }
+
+  function useHint() {
+    if (S.phase !== 'guessing' || S.misses < HINT_AT || S.hinted || S.error) return;
+    S.hinted = true;
+    el.n.value = String(S.cur.r.n); el.n.disabled = true;
+    renderGuess();
+    say(`n is ${S.cur.r.n}. Now find k. The speed bonus is gone for this clip.`);
+    render();
+  }
+
+  function reveal(info) {
+    const { r, v } = S.cur;
+    const gaps = gapsOf(r.k, r.n);
+    el.rvEq.textContent = `E(${r.k},${r.n})`;
+    el.rvTitle.textContent = v.title;
+    el.rvName.textContent = r.name || `E(${r.k},${r.n})`;
+    if (info.kind === 'solved') {
+      const parts = ['1 for the rhythm'];
+      if (info.w.bonus) parts.push(`${info.w.bonus} for speed`);
+      el.rvChip.textContent = `Solved · +${info.w.total} (${parts.join(' + ')}${S.hinted ? ', hint used' : ''}) · ${fmt(info.ms)}`;
+      el.rvChip.className = 'chip good';
+    } else {
+      el.rvChip.textContent = info.lost ? 'Gave up · −1' : 'Gave up · no points lost';
+      el.rvChip.className = 'chip bad';
+    }
+    if (r.description) { el.rvDesc.textContent = r.description; el.rvDesc.hidden = false; } else { el.rvDesc.hidden = true; }
+    if (r.mnemonic) { el.rvMnLbl.textContent = 'Mnemonic'; renderMnemonic(r.mnemonic); }
+    else { el.rvMnLbl.textContent = 'Say it'; el.rvMn.textContent = syllables(gaps); }
+    el.reveal.hidden = false;
+
+    el.front.innerHTML = '';
+    if (r.card) {
+      const img = new Image();
+      img.alt = `${r.name || 'Card'}, E(${r.k},${r.n})`;
+      img.src = r.card;
+      img.onerror = () => { el.front.innerHTML = ''; el.front.appendChild(noCard(r)); };
+      el.front.appendChild(img);
+    } else el.front.appendChild(noCard(r));
+    el.card.classList.add('flipped');
+    render();
+    try { el.next.focus({ preventScroll: true }); } catch (e) { el.next.focus(); }
+  }
+  // mnemonic format: one syllable per step, CAPITALS where a pulse falls, _ for a rest, hyphens between syllables
+  function renderMnemonic(text) {
+    el.rvMn.textContent = '';
+    (text.match(/_|[^-_]+/g) || []).forEach((t) => {
+      const rest = t === '_';
+      const pulse = !rest && t === t.toUpperCase() && t !== t.toLowerCase();
+      const sp = document.createElement('span');
+      sp.className = 'syl' + (pulse ? ' p' : rest ? ' r' : '');
+      sp.textContent = rest ? '·' : t;
+      el.rvMn.appendChild(sp);
+    });
+  }
+  function noCard(r) { const d = document.createElement('div'); d.className = 'nocard'; d.textContent = r.name || `E(${r.k},${r.n})`; return d; }
+
+  function resetGame() {
+    audio.pause();
+    S.score = 0; S.streak = 0; S.clipNo = 0; S.phase = 'idle'; S.cur = null; S.queue = []; S.loops = 0; S.lastT = 0;
+    S.ms = 0; S.since = null; S.finalMs = 0; S.misses = 0; S.hinted = false; S.error = false;
+    el.n.disabled = false; el.reveal.hidden = true; el.card.classList.remove('flipped');
+    audio.removeAttribute('src');
+    say('Press play to hear the first clip.');
+    render();
+  }
+
+  /* ---------- rendering ---------- */
+  let shownScore = 0;
+  function render() {
+    el.score.textContent = S.score; el.streak.textContent = S.streak; el.best.textContent = S.best;
+    if (S.score !== shownScore) {
+      shownScore = S.score;
+      el.score.classList.remove('bump'); void el.score.offsetWidth; el.score.classList.add('bump');
+    }
+    const guessing = S.phase === 'guessing' && !S.error;
+    el.check.disabled = !guessing;
+    el.hint.disabled = !(guessing && S.misses >= HINT_AT && !S.hinted);
+    el.giveup.disabled = !(guessing && S.misses >= GIVEUP_AT);
+    const unlocked = S.phase === 'revealed' || S.error;
+    el.next.disabled = !unlocked;
+    el.lockIcon.style.display = unlocked ? 'none' : '';
+    el.lockNote.textContent = unlocked ? (S.error ? 'This clip failed, so nothing is scored.' : 'Unlocked.') : 'Unlocks when n and k match the clip.';
+    el.clipNo.textContent = S.phase === 'idle' ? 'Ready' : `Clip ${S.clipNo}`;
+    setPlayLabel();
+
+    let h = '';
+    for (let i = 1; i <= GIVEUP_AT; i++) {
+      const lab = i === HINT_AT ? ' data-label="hint"' : i === GIVEUP_AT ? ' data-label="give up"' : '';
+      h += `<span class="dot${i <= S.misses ? ' on' : ''}"${lab}></span>`;
+    }
+    el.misses.innerHTML = h;
+    el.misses.setAttribute('aria-label', `${S.misses} of ${GIVEUP_AT} misses`);
+    clock();
+  }
+
+  function clock() {
+    const ms = elapsed();
+    el.elapsed.textContent = fmt(ms);
+    if (S.phase === 'guessing') {
+      const w = worthAt(ms);
+      el.worth.textContent = '+' + w.total;
+      if (S.hinted) el.worthSub.textContent = 'Hint used, so no speed bonus.';
+      else if (w.bonus) {
+        const lim = TIERS.find((t) => ms <= t[0])[0];
+        el.worthSub.textContent = `Speed bonus +${w.bonus} for ${Math.max(0, Math.ceil((lim - ms) / 1000))} more s.`;
+      } else el.worthSub.textContent = 'Speed bonus gone.';
+    } else if (S.phase === 'idle') {
+      el.worth.textContent = '+3'; el.worthSub.textContent = 'Speed bonus starts when the clip plays.';
+    } else {
+      el.worth.textContent = (S.delta > 0 ? '+' : S.delta < 0 ? '−' : '') + Math.abs(S.delta);
+      el.worthSub.textContent = 'Points from this clip.';
+    }
+  }
+  setInterval(clock, 200);
+
+  /* ---------- events ---------- */
+  el.play.addEventListener('click', () => {
+    if (S.phase === 'idle') return startClip();
+    if (audio.paused) { const p = audio.play(); if (p && p.catch) p.catch(() => {}); } else audio.pause();
+  });
+  el.n.addEventListener('input', renderGuess);
+  el.k.addEventListener('input', renderGuess);
+  el.check.addEventListener('click', check);
+  el.hint.addEventListener('click', useHint);
+  el.giveup.addEventListener('click', giveUp);
+  el.next.addEventListener('click', () => { if (!el.next.disabled) startClip(); });
+  el.reset.addEventListener('click', resetGame);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && (e.target === el.n || e.target === el.k)) { e.preventDefault(); check(); }
+  });
+
+  /* ---------- about page links and routing (#play and #about) ---------- */
+  function setLink(id, url) {
+    const a = $(id);
+    if (url) { a.href = url; a.target = '_blank'; a.rel = 'noopener'; }
+    else { a.classList.add('soon'); a.setAttribute('aria-disabled', 'true'); a.title = 'Link to be added'; }
+  }
+  setLink('lnkBandcamp', LINKS.bandcamp); setLink('lnkSubstack', LINKS.substack);
+  function route() {
+    const about = location.hash === '#about';
+    $('viewPlay').hidden = about; $('viewAbout').hidden = !about;
+    document.querySelector('.score').hidden = about;
+    $('navPlay').setAttribute('aria-current', about ? 'false' : 'page');
+    $('navAbout').setAttribute('aria-current', about ? 'page' : 'false');
+    if (about) audio.pause();                        // the listening clock stops with the sound
+  }
+  window.addEventListener('hashchange', route);
+
+  /* ---------- boot ---------- */
+  try { S.best = parseInt(localStorage.getItem(BEST_KEY), 10) || 0; } catch (e) { S.best = 0; }
+  buildTicks(el.nTicks, 2, 16); buildTicks(el.kTicks, 1, 15); route();
+  renderGuess(); render();
+  fetch('tracks.json')
+    .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then((d) => {
+      S.rhythms = (d.rhythms || []).filter((r) => r.versions && r.versions.length);
+      S.rhythms.forEach((r) => r.versions.forEach((v) => S.clips.push({ r, v })));
+      if (!S.rhythms.length) { say('No clips found in tracks.json.', 'bad'); el.play.disabled = true; }
+    })
+    .catch(() => { say('Could not load tracks.json, so there is nothing to play yet.', 'bad'); el.play.disabled = true; });
+})();
+</script>
+</body>
+</html>

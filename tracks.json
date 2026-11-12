@@ -1,0 +1,1039 @@
+{
+  "rhythms": [
+    {
+      "id": "e2-3",
+      "k": 2,
+      "n": 3,
+      "versions": [
+        {
+          "file": "audio/e2-3_INSTINCTVS_FAVILLA.mp3",
+          "title": "INSTINCTVS FAVILLA"
+        }
+      ],
+      "name": "SFÂNTA DUMINICĂ",
+      "description": "She is the sister of the other days of the week, or their idol, she wears white and lives far from humans, beyond Saturday’s water in a golden palace. She gets bruises and bleeds when housewives work on Sundays. She can eat only once a week, does all kinds of miracles and provides advice on how to deal with disease or property damage. Sometimes she is a river that encircles Heaven, opposite to Saturday encircling Hell.",
+      "mnemonic": "NO-WORK-uh",
+      "card": "cards/e2-3.webp"
+    },
+    {
+      "id": "e1-4",
+      "k": 1,
+      "n": 4,
+      "versions": [
+        {
+          "file": "audio/e1-4_Vâlve_Sorcova0001.mp3",
+          "title": "Vâlve Sorcova0001"
+        },
+        {
+          "file": "audio/e1-4_Vâlve_SorcovaCardMix.mp3",
+          "title": "Vâlve SorcovaCardMix"
+        },
+        {
+          "file": "audio/e1-4_Vâlve_SorcovaIanuarie26.mp3",
+          "title": "Vâlve SorcovaIanuarie26"
+        }
+      ],
+      "name": "SORCOVA",
+      "description": "Sorcova is a manifestation of ritual beating. Just like tapping on the shoulder, like beating a stake into the ground before building something. It marks the beginning, it starts the year, the house, the village, the country, the grave, just as a child’s home is founded through the sexual act. Once again, “beating” is a euphemism. It’s a placeholder in stories to be easily understood by children. It fertilizes the space, just as the priest goes from house to house at the beginning of the year to bless them. Magic. Sex and violence. Punk. Techno.",
+      "mnemonic": "HAP-py-new-year",
+      "card": "cards/e1-4.webp"
+    },
+    {
+      "id": "e3-4",
+      "k": 3,
+      "n": 4,
+      "versions": [
+        {
+          "file": "audio/e3-4_INSTINCTVS_IGNICVLVS.mp3",
+          "title": "INSTINCTVS IGNICVLVS"
+        }
+      ],
+      "name": "BĂLȚATUL",
+      "description": "",
+      "mnemonic": "",
+      "card": "cards/e3-4.webp"
+    },
+    {
+      "id": "e2-5",
+      "k": 2,
+      "n": 5,
+      "versions": [
+        {
+          "file": "audio/e2-5_INSTINCTVS_ARDOR.mp3",
+          "title": "INSTINCTVS ARDOR"
+        }
+      ],
+      "name": "BUHAI",
+      "description": "Echoing the sacrifice of the bull, previously a substitute for Mithra, the ritual named Buhaiul is performed around the New Year as part of the winter celebrations related to the next year’s harvest. Overpowered by Christmas, Buhaiul is still present in its shadow. It also gives the name of a musical instrument used in this ritual sing and dance. This is a small wooden barrel, top removed, covered with sheep skin like a drum, but it is pierced in the center by a horse hair tail. The player pulls the hair making the skin vibrate a mooing drone similar to the bull’s call.",
+      "mnemonic": "BOO-boo-HI-hi-hi",
+      "card": "cards/e2-5.webp"
+    },
+    {
+      "id": "e3-5",
+      "k": 3,
+      "n": 5,
+      "versions": [
+        {
+          "file": "audio/e3-5_INSTINCTVS_VESTA.mp3",
+          "title": "INSTINCTVS VESTA"
+        }
+      ],
+      "name": "MAMA DRACULUI",
+      "description": "Mother who would have given birth to demons, tobacco and the habit of smoking. She would resemble an old hag, as old as the world, black and ugly as the darkness of Hell, with horns on her head like pitchforks, a long hooked nose, eyes swollen like those of a drowned goat, tusks in her mouth like a wild boar’s, claws like sickles, a tail like a cow’s, long and curled, with a large pipe or chibouk between her teeth, flames coming out of her nose and a stench of tobacco from her mouth.",
+      "mnemonic": "PAB-lo-PI-CAS-so",
+      "card": "cards/e3-5.webp"
+    },
+    {
+      "id": "e4-5",
+      "k": 4,
+      "n": 5,
+      "versions": [
+        {
+          "file": "audio/e4-5_INSTINCTVS_VSTIO.mp3",
+          "title": "INSTINCTVS VSTIO"
+        }
+      ],
+      "name": "JOIMĂRIȚA",
+      "description": "Another Death Goddess. This one started as an ancestor veneration related divinity. She oversaw the fires that open portals to the other world. On the spring equinox in the Julian calendar (March 9th), or maybe the closest Thursday (since Joi means Thursday), people were starting fires in the home or in front of it, or in the graveyard, burning the phytomorph deity, as the danewort or hazel, plants brought for the ceremony by children or by virgin girls. There is a feast, food is passed over the fire, people might jump through the smoke, and there are also chairs for the spirits of the dead to sit while attending.",
+      "mnemonic": "BURN-BA-BY-BURN-_",
+      "card": "cards/e4-5.webp"
+    },
+    {
+      "id": "e5-6",
+      "k": 5,
+      "n": 6,
+      "versions": [
+        {
+          "file": "audio/e5-6_INSTINCTVS_ROGVS.mp3",
+          "title": "INSTINCTVS ROGVS"
+        }
+      ],
+      "name": "PĂLIILE",
+      "description": "Hot chicks. Their name sounds a bit like Ilie, and also like the verb a pârli (to scorch). The Scorcher Girls. There is no need for them to exist now that we have Sântilie, Elijah, this Christian Helios that burns stuff on a whim. But still they persist more as a shadow of what they once were, before this man came and took charge. They now play second fiddle, sent into the background, a backing group for this literal up-coming star showing up center stage.",
+      "mnemonic": "AND-THE-FUN-KY-BUNCH-_",
+      "card": "cards/e5-6.webp"
+    },
+    {
+      "id": "e2-7",
+      "k": 2,
+      "n": 7,
+      "versions": [
+        {
+          "file": "audio/e2-7_INSTINCTVS_PHARVS.mp3",
+          "title": "INSTINCTVS PHARVS"
+        }
+      ],
+      "name": "ÎMPĂRATUL ROȘ",
+      "description": "Pyrrhus is Greek for Red. We have Pyrrhic references and Red and Roux and Rosso and Rojo and Crveno references all across the world, they say these are traces of Atlantean mixed into the local fabric together with the Hyperborean White ones. That militaristic Pyrrhic/Apollonian dance is also coming from there. The whole past 6000 years history sits at the crossroad of these two migrations. Lots and lots of symbols and significations to be dug out of the story, but I’ll just mention that the Red Emperor’s Atlantean witch daughter heals our decapitated hero, giving him a new chance at life by the end of the story.",
+      "mnemonic": "DAUGH-ter-of-RED-emp-er-or",
+      "card": "cards/e2-7.webp"
+    },
+    {
+      "id": "e3-7",
+      "k": 3,
+      "n": 7,
+      "versions": [
+        {
+          "file": "audio/e3-7_INSTINCTVS_FVLGVR.mp3",
+          "title": "INSTINCTVS FVLGVR"
+        }
+      ],
+      "name": "COCOȘUL",
+      "description": "The Rooster is a Solar symbol of Atlantean origin as all other fiery and luminous symbols together with their Lunar counterparts. Sun and Moon, Rooster and Hen, Phoenix, the Waters. All of these were preceded by the Hyperborean Primordial Tradition, as the Boar, the Bear, the Swan, the fir forest, all of them wild, silent, polar.",
+      "mnemonic": "BOOM-tsi-BOOM-tsi-BOOM-tsi-tsi",
+      "card": "cards/e3-7.webp"
+    },
+    {
+      "id": "e4-7",
+      "k": 4,
+      "n": 7,
+      "versions": [
+        {
+          "file": "audio/e4-7_INSTINCTVS_ARA.mp3",
+          "title": "INSTINCTVS ARA"
+        }
+      ],
+      "name": "ZBURĂTORUL",
+      "description": "He is a mythical entity tormenting women and girls. Sometimes comes as a handsome man, sometimes as a Balaur, he descends upon an unsuspecting female’s home, giving her insomnia, tiredness, anxiety, unrest, even seemingly torturing her as she would wake up with bruises on her body. As one might expect, it is not without pleasure. This it what it was all about. Desire. Deep longing. Forbidden love. Montagues and Capulets. Twilight saga. Even if Zburătorul comes as a fire dragon, a comet, a meteor, once he is inside her home he eventually appears as her lover.",
+      "mnemonic": "UN-LUC-_-KY-_-GIRL-_",
+      "card": "cards/e4-7.webp"
+    },
+    {
+      "id": "e5-7",
+      "k": 5,
+      "n": 7,
+      "versions": [
+        {
+          "file": "audio/e5-7_INSTINCTVS_MICO.mp3",
+          "title": "INSTINCTVS MICO"
+        }
+      ],
+      "name": "TALPA IADULUI",
+      "description": "[She is] a root without a root, for it would not be a root if it itself had a root. It lives only for itself and all that it produces it keeps compacted in its bosom. It is the Original Attraction, Cupidity, Radical Egoism, the enthralling passion of any elementary life, the inner spring of Nature. It is a power at the same time prolific and centripetal, jealous of its children, not separating from them, like Gaia from her sons, the Titans. — Vasile Lovinescu, Creangă și creanga de aur",
+      "mnemonic": "TAL-PA-_-IA-DU-LUI-_",
+      "card": "cards/e5-7.webp"
+    },
+    {
+      "id": "e6-7",
+      "k": 6,
+      "n": 7,
+      "versions": [
+        {
+          "file": "audio/e6-7_INSTINCTVS_ERVPTIO.mp3",
+          "title": "INSTINCTVS ERVPTIO"
+        }
+      ],
+      "name": "TECLELE",
+      "description": "They are named after Saint Thecla (aka Te Ka). From the start, Teclele are many in number, she was only one. She was one of the first saints of the early Christian Church. Her story is found in the Acts of Paul and Thecla. She was a side character in the series based on Paul the Apostle saga, himself a quite important supporting role in the Christian Cinematic Universe. Imagine a complex enough female role in the Obi Wan Kenobi series. Teclele are the fiery feminine turning it all to ashes, together devouring and thus facilitating rebirth. More Kali than Thecla.",
+      "mnemonic": "NOW-LET'S-COUNT-TO-SE-VEN-_",
+      "card": "cards/e6-7.webp"
+    },
+    {
+      "id": "e3-8",
+      "k": 3,
+      "n": 8,
+      "versions": [
+        {
+          "file": "audio/e3-8_INSTINCTVS_TREPIDVS.mp3",
+          "title": "INSTINCTVS TREPIDVS"
+        }
+      ],
+      "name": "SÂNTILIE",
+      "description": "The hottest saint there is. So hot, that it marks the time the rams are to be separated from the ewes. No more breeding for you, sheep! Sântilie is another phonetic transliteration of a saint’s name. This one is Sfântul Ilie, Elijah, holy prophet, dear to all the Abrahamic religions and more. He is doing it all, thunder and lightning, in an attempt to finish every devil there is. But he produces considerable collateral damage so God takes one of his arms, legs or eyes to temper him a little. Still he is relentless. And that’s why on July 20th, Romania celebrates the Day of Aviation and Air Forces. He is a big deal during summer.",
+      "mnemonic": "E-to-the-LI-to-the-JAH-and",
+      "card": "cards/e3-8.webp"
+    },
+    {
+      "id": "e5-8",
+      "k": 5,
+      "n": 8,
+      "versions": [
+        {
+          "file": "audio/e5-8_INSTINCTVS_INCENDIARIVS.mp3",
+          "title": "INSTINCTVS INCENDIARIVS"
+        }
+      ],
+      "name": "NAIBA",
+      "description": "Apparently he is a little trickster. Maybe “The Heck” is another one, but that’s not my business. Sympathetic devil, invoked in situations not specific to evil. In spoken language, the word Naiba can express doubt, uncertainty, and even endearment. ",
+      "mnemonic": "NUH-MAH-_-UH-NAH-_-EH-_",
+      "card": "cards/e5-8.webp"
+    },
+    {
+      "id": "e7-8",
+      "k": 7,
+      "n": 8,
+      "versions": [
+        {
+          "file": "audio/e7-8_INSTINCTVS_CONFLAGRATIO.mp3",
+          "title": "INSTINCTVS CONFLAGRATIO"
+        }
+      ],
+      "name": "MĂCINICII",
+      "description": "They’re sweet. Milk and honey buttery dough sprinkled with walnuts. Remember to like share and subscribe your ancestors just as you like share and subscribe to the sweet ‘8’-shaped dessert. Devour it. The opposite of Saturn devouring his son. It’s his son devouring him for a change. The anthropomorphized ‘8’ shape is an echo of the human sacrifices done to mark the death and rebirth of the divinity related with the beginning of the Agricultural New Year.",
+      "mnemonic": "WOULDST-THOU-LIKE-THE-TASTE-OF-BUTT-er",
+      "card": "cards/e7-8.webp"
+    },
+    {
+      "id": "e2-9",
+      "k": 2,
+      "n": 9,
+      "versions": [
+        {
+          "file": "audio/e2-9_ΠΑΘΟΣ_ΠΆΓΟΣ .mp3",
+          "title": "ΠΑΘΟΣ ΠΆΓΟΣ "
+        }
+      ],
+      "name": "AGHIUȚĂ",
+      "description": "Whenever you would need to summon a sympathetic version of the devil, you’d need to invoke Aghiuță. It’s yet another name for the old big god dethroned by the new Christian God. People avoided calling the devil by his name. They used all sorts of euphemisms for fear of not summoning him. Mockingly calling him “holy” would supposedly confuse him or even deter him altogether. Going even further, they added the diminutive suffix, to make it less imposing and fearful. We got in the end a “Little Holy One”.",
+      "mnemonic": "AH-gy-uh-tsah-is-AH-gy-os-is",
+      "card": "cards/e2-9.webp"
+    },
+    {
+      "id": "e4-9",
+      "k": 4,
+      "n": 9,
+      "versions": [
+        {
+          "file": "audio/e4-9_ΠΑΘΟΣ_ΚΥ͂ΜΑ.mp3",
+          "title": "ΠΑΘΟΣ ΚΥ͂ΜΑ"
+        }
+      ],
+      "name": "VÂLVA",
+      "description": "Vâlvă is a folkloric term in Romanian tradition referring to a guardian spirit, protective essence, or spiritual guardian of things—each being, place, or concept is believed to have its own spiritual guardian or animating force. Vâlva is not just a wizard or a sage, a fraud or a stutterer. It might well be all of them and more. It came to be a blanket term for most of the things I describe during this trip through Romanian mythology.",
+      "mnemonic": "VÂL-va-VÂL-va-VÂL-va-VÂL-va-va",
+      "card": "cards/e4-9.webp"
+    },
+    {
+      "id": "e5-9",
+      "k": 5,
+      "n": 9,
+      "versions": [
+        {
+          "file": "audio/e5-9_ΠΑΘΟΣ_ΚΌΛΠΟΣ.mp3",
+          "title": "ΠΑΘΟΣ ΚΌΛΠΟΣ"
+        }
+      ],
+      "name": "PUSTIA",
+      "description": "So it’s a man, and then it’s also a woman. It’s the gaping void that sucks everything. It’s chaos. Where everything returns eventually. And you don’t mess with this order of things. It has to receive. Always receiving.",
+      "mnemonic": "ME-MEN-_-TO-_-MO-_-RI-_",
+      "card": "cards/e5-9.webp"
+    },
+    {
+      "id": "e7-9",
+      "k": 7,
+      "n": 9,
+      "versions": [
+        {
+          "file": "audio/e7-9_ΠΑΘΟΣ_ΔΆΚΡΥΑ.mp3",
+          "title": "ΠΑΘΟΣ ΔΆΚΡΥΑ"
+        }
+      ],
+      "name": "LOSTRIȚA",
+      "description": "She is a fish. A modern classic one. Vasile Voiculescu wrote this short story published posthumously in 1970 about this fisher who fell in love with this elusive fish. Firmly anchored in folklore and local traditions, yet a new interpretation. Think how Nosferatu is loosely based on Dracula which is in turn loosely based on older tales and mythology. We have Aliman obsessing over this fish, consuming him, finally getting to catch her and letting her go immediately. Later, just before his wedding day, hearing that Lostrița appeared again in the river, he runs to the river, dives in, catching her with his bare arms only to end up swallowed by the waves.",
+      "mnemonic": "LET'S-DIVE-IN-_-LET'S-DIVE-RIGHT-IN-_",
+      "card": "cards/e7-9.webp"
+    },
+    {
+      "id": "e8-9",
+      "k": 8,
+      "n": 9,
+      "versions": [
+        {
+          "file": "audio/e8-9_ΠΑΘΟΣ_ῬΕΎΜΑ.mp3",
+          "title": "ΠΑΘΟΣ ῬΕΎΜΑ"
+        }
+      ],
+      "name": "DRĂGAICA",
+      "description": "She is the protector of the fields and of fertility in general. Dressed like a bride, she comes out on the summer solstice as a Neolithic lunar divinity. Artemis or Hera were later loosely associated with her. She is basically our south-east equivalent of our north-west Sânzienele I discussed two days ago. It seems that on this side of the Carpathians one of them has to lead, while on the other side they have them as a group. I’m sure it has to do with the Greek/Levantine influence around the Danube basin. I am picturing the northern group as blondes, and this one as more of a brunette.",
+      "mnemonic": "GWEN-STE-FA-NI-GWEN-STE-FA-NI-_",
+      "card": "cards/e8-9.webp"
+    },
+    {
+      "id": "e3-10",
+      "k": 3,
+      "n": 10,
+      "versions": [
+        {
+          "file": "audio/e3-10_ΠΑΘΟΣ_ΜΟΝΑΧΙΚΌΣ.mp3",
+          "title": "ΠΑΘΟΣ ΜΟΝΑΧΙΚΌΣ"
+        }
+      ],
+      "name": "CEL DIN BALTĂ",
+      "description": "He is the culprit in most cases of drowning, flipping boats, giving muscle cramps to swimmers. He creates whirlpools, drags people underwater. When you have water stuck in your ear after swimming it’s also his fault. There is a special song kids sing while jumping on one foot to get it out. A lot of inconveniences related to water are blamed on Cel din Baltă. He and his kind have their underwater lairs, where they burn their special waterproof fires. He has a cousin living in deep wells. Keep children away from wells. And from any body of water. They might make friends with you know who.",
+      "mnemonic": "CEL-din-ba-CEL-din-ba-CEL-din-bal-tă",
+      "card": "cards/e3-10.webp"
+    },
+    {
+      "id": "e7-10",
+      "k": 7,
+      "n": 10,
+      "versions": [
+        {
+          "file": "audio/e7-10_ΠΑΘΟΣ_ΧΟΡΕΥΤΙΚΌΣ.mp3",
+          "title": "ΠΑΘΟΣ ΧΟΡΕΥΤΙΚΌΣ"
+        }
+      ],
+      "name": "IELELE",
+      "description": "",
+      "mnemonic": "",
+      "card": "cards/e7-10.webp"
+    },
+    {
+      "id": "e9-10",
+      "k": 9,
+      "n": 10,
+      "versions": [
+        {
+          "file": "audio/e9-10_ΠΑΘΟΣ_ἘΚΒΟΛΉ.mp3",
+          "title": "ΠΑΘΟΣ ἘΚΒΟΛΉ"
+        }
+      ],
+      "name": "PAPARUDA",
+      "description": "This girl, usually around 10 years old is dressed in this plant costume, and being followed by all the other kids runs around the village. First she was naked covered more or less in leaves, then it got to having just a couple of leafy branches tied over her clothes. The mother of each household welcomes her by dropping a bucket of water on her. Or alternatively, she splashes water on the other people present. Basically it’s a little water gun fight before water guns. People get wet, laugh and sing, and then take Paparuda back to the place they dressed her up, near a river maybe, undressing her of the foliage.",
+      "mnemonic": "PA-PA-RU-DĂ-RU-DĂ-NE-U-DĂ-_",
+      "card": "cards/e9-10.webp"
+    },
+    {
+      "id": "e2-11",
+      "k": 2,
+      "n": 11,
+      "versions": [
+        {
+          "file": "audio/e2-11_Vâlve_Sorbul.mp3",
+          "title": "Vâlve Sorbul"
+        },
+        {
+          "file": "audio/e2-11_Vâlve_Sorbul0050.mp3",
+          "title": "Vâlve Sorbul0050"
+        },
+        {
+          "file": "audio/e2-11_ΠΑΘΟΣ_ΣΤΆΛΑ.mp3",
+          "title": "ΠΑΘΟΣ ΣΤΆΛΑ"
+        }
+      ],
+      "name": "SORBUL",
+      "description": "He dwells at the bottom of all waters. He might have scales like a fish. Sucks the water with everything in it including the ones on the banks. Sometimes he sucks so much that he takes in all the frogs and that’s why it’s raining frogs. Feminine man of the depths. Some sort of a powerful Merman. Turns things to chaos. Levelling. And at the same time trying to preserve a balance. Watery balance. But it’s wavy. Never quite getting it right.",
+      "mnemonic": "SUCK!-_-suck-and-then-give-BACK!-_-more-than-you",
+      "card": "cards/e2-11.webp"
+    },
+    {
+      "id": "e3-11",
+      "k": 3,
+      "n": 11,
+      "versions": [
+        {
+          "file": "audio/e3-11_ΠΑΘΟΣ_ΤΈΛΕΙΟΣ.mp3",
+          "title": "ΠΑΘΟΣ ΤΈΛΕΙΟΣ"
+        }
+      ],
+      "name": "CALOIAN",
+      "description": "People built a small clay effigy shaped as a man, representing a messenger to be sent to the other side to persuade the god responsible for rain to spare a little for us tiny humans. Alternatively, the clay man is himself Caloian and he passes through the same rainmaking ritual. There was sculpture, poetry, singing, dancing, costumes, cooking involved. An artistic week for the village. In some areas, they made a dough Caloian placed in a pumpkin shell coffin. Of course they danced hore, reels, spinning themselves away into the transcendental. If one would squint long enough at this happening he would see it origins in an initiation rite, a Thracian one maybe. Involving human sacrifice obviously.",
+      "mnemonic": "CA-lo-ian-ul-CA-lo-ian-ul-CA-lo-ian",
+      "card": "cards/e3-11.webp"
+    },
+    {
+      "id": "e4-11",
+      "k": 4,
+      "n": 11,
+      "versions": [
+        {
+          "file": "audio/e4-11_Vâlve_CălușulCardMix.mp3",
+          "title": "Vâlve CălușulCardMix"
+        },
+        {
+          "file": "audio/e4-11_ΠΑΘΟΣ_ΠΕΡΙΠΈΤΕΙΑ.mp3",
+          "title": "ΠΑΘΟΣ ΠΕΡΙΠΈΤΕΙΑ"
+        }
+      ],
+      "name": "CĂLUȘUL",
+      "description": "He must be a man with exceptional moral qualities and virtues of character, familiarized with all the Mysteries of the Căluș, knowledgeable in incantations, charms and spells which he is not allowed to reveal to anyone, except the future leader. The transmission of the position is done from leader to leader, constituting in itself a form of inheritance.",
+      "mnemonic": "GET-to-BORN-to-the-JUMP-to-the-DIE-to-the",
+      "card": "cards/e4-11.webp"
+    },
+    {
+      "id": "e5-11",
+      "k": 5,
+      "n": 11,
+      "versions": [
+        {
+          "file": "audio/e5-11_ΠΑΘΟΣ_ΧΕΥ͂ΜΑ.mp3",
+          "title": "ΠΑΘΟΣ ΧΕΥ͂ΜΑ"
+        }
+      ],
+      "name": "ȘTIMA APELOR",
+      "description": "She is said to be dwelling in rivers and lakes, a tall, strong white woman (as in pale, because we had only white women around these parts). Her breasts — her tits (as Pamfile notes) are so big that sometimes she is having them thrown back over her shoulders. Long blond hair touching the ground. Some say she is half fish, others say she is half man, or whatever she wants to be. So she basically does floods. Periodically she makes rivers overflow drowning people until she got the number of heads needed. Kids know to beware sitting on river banks. Particular rivers have particular quotas. Olt, our longest river, demands one head a day. If he doesn’t get it, it’s throws tantrums. So here comes our Știma Apelor out of the water around noon and calls for a man.",
+      "mnemonic": "SHTEE-_-MAH-_-AH-_-PEH-_-LORE-_-_",
+      "card": "cards/e5-11.webp"
+    },
+    {
+      "id": "e6-11",
+      "k": 6,
+      "n": 11,
+      "versions": [
+        {
+          "file": "audio/e6-11_Vâlve_Vlăsia.mp3",
+          "title": "Vâlve Vlăsia"
+        },
+        {
+          "file": "audio/e6-11_Vâlve_Vlăsia0060.mp3",
+          "title": "Vâlve Vlăsia0060"
+        },
+        {
+          "file": "audio/e6-11_ΠΑΘΟΣ_ΚΡΉΝΗ.mp3",
+          "title": "ΠΑΘΟΣ ΚΡΉΝΗ"
+        }
+      ],
+      "name": "VLĂSIA",
+      "description": "We don’t know her original name. She is the protector of migratory birds and pregnant women of all things. Apparently it’s not THAT random an association. The return marks the beginning of the fertility season. Storks and babies, swallows and hope and continuation of family lines. The classic turn from a bird-lady caring for pregnant women to an anti-bird-man caring for a child.",
+      "mnemonic": "BIS-HOP-_-OF-_-SE-_-BAS-_-TEA-_",
+      "card": "cards/e6-11.webp"
+    },
+    {
+      "id": "e7-11",
+      "k": 7,
+      "n": 11,
+      "versions": [
+        {
+          "file": "audio/e7-11_ΠΑΘΟΣ_ΑΚΡΊΒΕΙΑ.mp3",
+          "title": "ΠΑΘΟΣ ΑΚΡΊΒΕΙΑ"
+        }
+      ],
+      "name": "BABA CLOANȚA",
+      "description": "She is literally the hooked nose crone par excellence. Always up to no good. Similar to Muma Pădurii but not quite the same. Baba Cloanța is really bad. Nothing good to say about her. Vasile Lovinescu commenting on Creangă’s tales, mentions in passing our old Baba as being the quintessential Tamas force, pulling down relentlessly. Opposed to any special princess/fairy pulling up, and below any earthly daughters of kings spreading east and west horizontally. ",
+      "mnemonic": "YA-GA!-_-RO-GA!-_-CLOAN-ȚA!-_-HAGS!-_",
+      "card": "cards/e7-11.webp"
+    },
+    {
+      "id": "e8-11",
+      "k": 8,
+      "n": 11,
+      "versions": [
+        {
+          "file": "audio/e8-11_ΠΑΘΟΣ_ΒΛΑΣΤΌΣ.mp3",
+          "title": "ΠΑΘΟΣ ΒΛΑΣΤΌΣ"
+        }
+      ],
+      "name": "FLORIILE",
+      "description": "They bring the willow branches that our orthodox believers use to decorate the icons with and keep around to protect the house during the year in any instance of a natural calamity. Now it’s the time to stop wearing Mărțișorul and pin it on a blossoming branch outside. Girls would go into the forest to gather some hart’s tongue fern, used for love spells. The day was called “nettles wedding’s day” instead of the Roman label it has today. All of this in strong connection with the cult of the dead. Including doing work at their graves, sowing flowers, doing spells.",
+      "mnemonic": "FLA-MI-NES-_-FLA-MI-NES-_-FLO-RA-_",
+      "card": "cards/e8-11.webp"
+    },
+    {
+      "id": "e9-11",
+      "k": 9,
+      "n": 11,
+      "versions": [
+        {
+          "file": "audio/e9-11_Vâlve_Balaurii01.mp3",
+          "title": "Vâlve Balaurii01"
+        },
+        {
+          "file": "audio/e9-11_ΠΑΘΟΣ_ΠΈΛΑΓΟΣ.mp3",
+          "title": "ΠΑΘΟΣ ΠΈΛΑΓΟΣ"
+        }
+      ],
+      "name": "BALAURII",
+      "description": "Slithering, flying, sucked by Sorbul, fiery, watery, windy, teaming up with Solomonarii for changing the weather for good or for ill. They do it all. They’re here they’re there, they’re everywhere. Imagine dragons. Sometimes they have many heads, like the Hydra. They say that if a snake doesn’t bite anyone and is not being seen by anyone for 7 or 9 or 12 years, it grows wings and feet and flies into the clouds as a Balaur or Zmeu1. From there they can provoke nasty weather. They make thunder and lightning in the effort of killing the Devil.",
+      "mnemonic": "LET'S-KILL-EV-ERY-ONE-_-NOT-YET-NOT-YET-_",
+      "card": "cards/e9-11.webp"
+    },
+    {
+      "id": "e10-11",
+      "k": 10,
+      "n": 11,
+      "versions": [
+        {
+          "file": "audio/e10-11_ΠΑΘΟΣ_ΚΑΤΑΡΡΆΚΤΗΣ.mp3",
+          "title": "ΠΑΘΟΣ ΚΑΤΑΡΡΆΚΤΗΣ"
+        }
+      ],
+      "name": "FETE DE APĂ",
+      "description": "Water Girls. Not ladies of any lake, not bringers of swords to valiant knights. They are what we moderns call sirens. Beautiful girls half fish, singing to lure young men. The Greek’s sirens were not it. Just as at some point in time people substituted the biblical accurate angels with cute winged chubby babies, they also substituted the abominations that the Greeks called sirens with these cute slippery girls. We had these girls populating European waters since time immemorial, and this was them being conquered by a new culture, the new gods hijacking old names and clothes.",
+      "mnemonic": "DON'T-GO-CHA-SING-WAT-ER-GIRLS-OR-DO-GO-_",
+      "card": "cards/e10-11.webp"
+    },
+    {
+      "id": "e5-12",
+      "k": 5,
+      "n": 12,
+      "versions": [
+        {
+          "file": "audio/e5-12_Mысль_Разлом.mp3",
+          "title": "Mысль Разлом"
+        },
+        {
+          "file": "audio/e5-12_Vâlve_Păduroiul0058.mp3",
+          "title": "Vâlve Păduroiul0058"
+        }
+      ],
+      "name": "PĂDUROIUL",
+      "description": "He is the master of everything forest. Together with Muma Pădurii (the Mother of the Forest), of course, his more famous partner. He is less smart and easier to trick than her. Not so villainy, either. He doesn’t like people disturbing the silence in the forest at night. Understandable. As usual, his appearance worsen with the advent of Christianity, he got horse’s hooves and hair like It from the Addams family, or any other imaginable deformity. This sounds like a classic case of the Wild Man. It can be traced to Silvanus, the Roman god of the forest, or even to Enkidu, Gilgamesh’s buddy.",
+      "mnemonic": "WOO-dy-HAR-rel-son-WOO-dy-WOO-dy-HAR-el-son",
+      "card": "cards/e5-12.webp"
+    },
+    {
+      "id": "e7-12",
+      "k": 7,
+      "n": 12,
+      "versions": [
+        {
+          "file": "audio/e7-12_Mысль_Матка.mp3",
+          "title": "Mысль Матка"
+        }
+      ],
+      "name": "MUMA PĂDURII",
+      "description": "She is the archetypal witch. People had old witchy antidotes for her dealings, as other new exorcising methods were not so helpful apparently. There was no problem redirecting the menace to the neighbors instead of loving them. She is living in the forest, obviously, and is related with Păduroiul, that Radegast type character. They are also the proud parents of Fata Pădurii.",
+      "mnemonic": "MA-MA-_-WOMB-_-MA-MA-_-WOMB-_-WOMB-_",
+      "card": "cards/e7-12.webp"
+    },
+    {
+      "id": "e11-12",
+      "k": 11,
+      "n": 12,
+      "versions": [
+        {
+          "file": "audio/e11-12_Mысль_Глыба .mp3",
+          "title": "Mысль Глыба "
+        }
+      ],
+      "name": "MUTA PĂMÂNTULUI",
+      "description": "",
+      "mnemonic": "",
+      "card": "cards/e11-12.webp"
+    },
+    {
+      "id": "e2-13",
+      "k": 2,
+      "n": 13,
+      "versions": [
+        {
+          "file": "audio/e2-13_Mысль_Kамень.mp3",
+          "title": "Mысль Kамень"
+        }
+      ],
+      "name": "SPÂNUL",
+      "description": "Spânul is exclusively constrictive, smooth, polished like glazed ceramic, but on such stones the edges of razors are sharpened... When he is the master of a living being, he can have through his nature only a vampiric-comprehensive role toward it; but when this being steps onto the calvary of an initiatic realization, it thins out all the individual elements within it, until they disappear. Now these elements are by definition limiting and from this we see the eminently positive role of Spânul, without him being aware of it. — Vasile Lovinescu, Creangă și Creanga de Aur",
+      "mnemonic": "ALB-spâ-nul-și-ha-rap-ALB-ha-ra-alb-si-ha-rap",
+      "card": "cards/e2-13.webp"
+    },
+    {
+      "id": "e3-13",
+      "k": 3,
+      "n": 13,
+      "versions": [
+        {
+          "file": "audio/e3-13_Mысль_Грань.mp3",
+          "title": "Mысль Грань"
+        }
+      ],
+      "name": "BLOJUL",
+      "description": "This guy is part of the mask dance that’s the most widespread in Romania. It’s a midwinter dance. Blojul or Moșul (The Old Man) is accompanied by an animal, be it a goat, a cow or a stag. The old man ( “Blojul”), dressed in old shaggy clothes, with a sheepskin coat turned inside out, girdled with a belt sewn with bells, wearing a mask made of fur or tree bark, and holding a sword, gradually turned into a less spectacular character impersonating the shepherd or the merchant.",
+      "mnemonic": "E-mi-ly-it's-E-mi-ly-it's-E-mi-ly-blunt!-_",
+      "card": "cards/e3-13.webp"
+    },
+    {
+      "id": "e4-13",
+      "k": 4,
+      "n": 13,
+      "versions": [
+        {
+          "file": "audio/e4-13_Mысль_Престол.mp3",
+          "title": "Mысль Престол"
+        }
+      ],
+      "name": "ȘARPELE CASEI",
+      "description": "Whenever you hear a quiet ticking inside the walls of your house, it’s probably just your Șarpele Casei (House snake) or alternatively, the House Clock. It’s more likely to hear it during summer in an old earthworks building. He looks like a regular snake but he’s pale white just like a plant grows pale in complete darkness. He lives inside the walls. Doesn’t bite, they say it’s not advisable to kill him.",
+      "mnemonic": "E-vil-is-E-vil-does-E-vil-is-SOR-ce-ry-is",
+      "card": "cards/e4-13.webp"
+    },
+    {
+      "id": "e5-13",
+      "k": 5,
+      "n": 13,
+      "versions": [
+        {
+          "file": "audio/e5-13_Mысль_Заговор.mp3",
+          "title": "Mысль Заговор"
+        },
+        {
+          "file": "audio/e5-13_Vâlve_Solomonarii0066.mp3",
+          "title": "Vâlve Solomonarii0066"
+        }
+      ],
+      "name": "SOLOMONARII",
+      "description": "Seventh’s son of the seventh’s son. Weather benders. From caves to the clouds. Dragon riders. Cloud banishers. Solmoxis. Zalmoxis. Shamanari. Salamanca. It has it all.",
+      "mnemonic": "HOP-_-_-ȘI-_-AȘA-_-_-ȘI-_-AȘA-_-_",
+      "card": "cards/e5-13.webp"
+    },
+    {
+      "id": "e6-13",
+      "k": 6,
+      "n": 13,
+      "versions": [
+        {
+          "file": "audio/e6-13_Mысль_Корень.mp3",
+          "title": "Mысль Корень"
+        }
+      ],
+      "name": "CERBUL",
+      "description": "He has gone a long way as a stand-in for the father god, the virility deity. He was here for the Neolithic wood/forest civilization around these parts, assisting Muma Pădurii by pulling her coach. That’s also why we have those reindeers pulling Santa. He was here for the first agrarians that followed, his antlers used as plows. And also for the Indo-European selective breeders as the one that got away, elusive majestic creature never to be domesticated. Cerbul’s ritual sacrifice was frequently associated with a rite of passage for the young lads before their wedding.",
+      "mnemonic": "PIS-_-SES-_-IN-_-THE-_-RI-_-VER-_-_",
+      "card": "cards/e6-13.webp"
+    },
+    {
+      "id": "e7-13",
+      "k": 7,
+      "n": 13,
+      "versions": [
+        {
+          "file": "audio/e7-13_Mысль_Почва.mp3",
+          "title": "Mысль Почва"
+        }
+      ],
+      "name": "FATA PĂDURII",
+      "description": "",
+      "mnemonic": "",
+      "card": "cards/e7-13.webp"
+    },
+    {
+      "id": "e8-13",
+      "k": 8,
+      "n": 13,
+      "versions": [
+        {
+          "file": "audio/e8-13_Vâlve_Blajinii.mp3",
+          "title": "Vâlve Blajinii"
+        }
+      ],
+      "name": "BLAJINII",
+      "description": "These guys appear to be paraded around the Christian tradition as the model kid, the ideal believer. While you all live in sin, how come they can be so righteous? They are fasting all the time, don’t engage in any carnal pleasure, they just pray and pray and pray. They don’t even bother to keep track of time, we throw red egg shells down the river so in a week or so when they will see our trash floating they’ll know it’s Easter. Somehow the eggs would be resurrected from these empty shells and this is what they’ll eat for the whole year.",
+      "mnemonic": "YA-BA-_-DA-BA-_-DOO-_-DA-BA-_-DOO-_",
+      "card": "cards/e8-13.webp"
+    },
+    {
+      "id": "e9-13",
+      "k": 9,
+      "n": 13,
+      "versions": [
+        {
+          "file": "audio/e9-13_Mысль_Брожение.mp3",
+          "title": "Mысль Брожение"
+        }
+      ],
+      "name": "BREHNELE",
+      "description": "Now imagine myriads of variations of these creatures populating the woods. Peeking from behind tree trunks, under the fallen leaves, stalking the passer-by from the tree tops. Suddenly we are not out of whimsy anymore, au contraire. All the whimsy one can wish for accessible with every walk into the forest. They are the collective spirit of the forest. Cute and cuddly and also a bit scary and potentially dangerous.",
+      "mnemonic": "IT'S-WINE-wine-IT'S-BEER-beer-IT'S-BREAD-bread-SO-UR-DOUGH-dough",
+      "card": "cards/e9-13.webp"
+    },
+    {
+      "id": "e10-13",
+      "k": 10,
+      "n": 13,
+      "versions": [
+        {
+          "file": "audio/e10-13_Mысль_Жила.mp3",
+          "title": "Mысль Жила"
+        }
+      ],
+      "name": "BENGA",
+      "description": "She is a she-devil running around naked, hair loose, with her tits thrown back over her shoulders. Her name is interchangeable with the devil when one wants a basic curse but with a little exotic touch. She may take you, if you are a newborn and maybe cursed by a gypsy. At least that’s what the said in the past. These days you could be taken to her by one extremely sexy chica, if you are a sensitive/horny young man.",
+      "mnemonic": "RO-MA-NI-_-RO-MA-NI-_-RO-MA-NI-AH-_",
+      "card": "cards/e10-13.webp"
+    },
+    {
+      "id": "e11-13",
+      "k": 11,
+      "n": 13,
+      "versions": [
+        {
+          "file": "audio/e11-13_Mысль_Землетрясение.mp3",
+          "title": "Mысль Землетрясение"
+        }
+      ],
+      "name": "SÂNZIENELE",
+      "description": "They were the good fairies. They were showing up in groups at night, usually odd in number. These beautiful maidens were abducted by zmei, locked up in hidden palaces or in deep dark woods, and are taking their annual trip to our world, helping out, blessing, spreading the good vibes. They show up walking or floating through the air singing and dancing. Healers and fertilizers. The “good” girl band as opposed to Iele or Rusalii. Exceptionally they can also do harm to people that do not observe the customs.",
+      "mnemonic": "SÂN-ZI-E-NE-LE-_-SÂN-ZI-E-NE-LE-LE-_",
+      "card": "cards/e11-13.webp"
+    },
+    {
+      "id": "e12-13",
+      "k": 12,
+      "n": 13,
+      "versions": [
+        {
+          "file": "audio/e12-13_Mысль_Зодиак.mp3",
+          "title": "Mысль Зодиак"
+        }
+      ],
+      "name": "URSITOARELE",
+      "description": "it seems to me they were usually bad tempered, a bit like Maleficent, and not at all like those other three good happy go lucky fat women with wings. So there were three Maleficents to appease each time a kid was born. And this was the default. Not because she was not invited. Just because chances were they are like that. Crazy mad spiteful women. Life was hard. And in the Christianized stories involving God, he is always helpless when asked to change something they fated. They came before his time. He has no power over them or over their weaving. Some legends of actual saints trying to change outcomes go nowhere because nobody messes with Ursitoarele.",
+      "mnemonic": "UR-SI-TOA-RE-UR-SI-TOA-RE-UR-SI-TOA-RE-le",
+      "card": "cards/e12-13.webp"
+    },
+    {
+      "id": "e3-14",
+      "k": 3,
+      "n": 14,
+      "versions": [
+        {
+          "file": "audio/e3-14_Duh_Luceafăr.mp3",
+          "title": "Duh Luceafăr"
+        }
+      ],
+      "name": "ZGRIPȚUROAICA",
+      "description": "She usually helps our hero escape after the big battle with the dragon. Because he previously saved her babies so she owes him one. She might embody a rescue ship taking our wondering heroes home. She swoops in and saves the day. She might be the same as Scorpia or Gheonoaia, other “birds” that start off as snakes, and with time and some Platonic and Abrahamic thought they turn into killers of snakes.",
+      "mnemonic": "DA-zgrip-țu-roai-ca-DA-ghe-o-noa-ia-DA-scor-pi-a",
+      "card": "cards/e3-14.webp"
+    },
+    {
+      "id": "e5-14",
+      "k": 5,
+      "n": 14,
+      "versions": [
+        {
+          "file": "audio/e5-14_Duh_Vijelie.mp3",
+          "title": "Duh Vijelie"
+        }
+      ],
+      "name": "SÂMEDRU",
+      "description": "His celebration is conflated with the Orthodox Saint Demetrius of Thessalonika on October 26th. Sâmedru is a mangled, folk version of the saint’s name, just like his brother Saint George got to be named Sângiorzul. These two brothers split the year in half around the equinoxes, and two other brothers are marking the solstices1, the middle of those two pastoral seasons. According to myths and legends, Sâmedru is a regular guy, an animal herder, a young lad that is transforming into a pig by night, an old zoomorphic symbol for the spirit of the wheat.",
+      "mnemonic": "PSEH-_-_-OOH-_-_-DOH-_-_-AK-_-SAK-_-_",
+      "card": "cards/e5-14.webp"
+    },
+    {
+      "id": "e9-14",
+      "k": 9,
+      "n": 14,
+      "versions": [
+        {
+          "file": "audio/e9-14_Duh_Divan.mp3",
+          "title": "Duh Divan"
+        }
+      ],
+      "name": "BUFNIȚA",
+      "description": "While the Greek name of this bird ended pointing at all sorts of undead creatures, Bufnița, The Owl, kept on being related to death itself. All over the world she has roughly the same role since times immemorial. She was there to be mounted by Lakshmi, representing Lilith, as a lucky charm but also a bad omen. Apparently she first embodied wisdom, and later relegated to darkness and mourning. As many others in Christianized lands, she was robbed of any duality and put firmly into the malefic camp.",
+      "mnemonic": "TUR-BO-_-THE-OWL-_-AK-SAK-_-DI-VAN-_-LIMP-_",
+      "card": "cards/e9-14.webp"
+    },
+    {
+      "id": "e11-14",
+      "k": 11,
+      "n": 14,
+      "versions": [
+        {
+          "file": "audio/e11-14_Duh_Nori.mp3",
+          "title": "Duh Nori"
+        }
+      ],
+      "name": "SÂNTANDREI",
+      "description": "",
+      "mnemonic": "",
+      "card": "cards/e11-14.webp"
+    },
+    {
+      "id": "e13-14",
+      "k": 13,
+      "n": 14,
+      "versions": [
+        {
+          "file": "audio/e13-14_Duh_Vuiet.mp3",
+          "title": "Duh Vuiet"
+        }
+      ],
+      "name": "STRIGA",
+      "description": "Striga, strigoi, tomayto, tomahto. It goes by cognates of the Greek Strix all the way through Eastern Europe. For the Greeks it was menacing owl related, then it blurred away ending as some kind of ghost, a dead soul haunting the living. Albanians have their shtriga that turns into an insect, the Polish have their vampiric strzyga. Mostly women, basically witches, stalking for young children, babies to steal or to get ill. It’s well documented these days on the internet. Ways to prevent turning into one and ways to keep her away from your house and family. Protection and prevention.",
+      "mnemonic": "STRI-GA-STRI-GOI-STRI-GA-STRI-GOI-STRI-GA-SCREAM-AND-ROAR-_",
+      "card": "cards/e13-14.webp"
+    },
+    {
+      "id": "e1-15",
+      "k": 1,
+      "n": 15,
+      "versions": [
+        {
+          "file": "audio/e1-15_Vâlve_Clopotul0071.mp3",
+          "title": "Vâlve Clopotul0071"
+        }
+      ],
+      "name": "CLOPOTUL",
+      "description": "Clopotul is personifying the metallic instrument whose tongue speaks the sacred language. He comforts and brings the faithful to prayer, breaks spells and banishes nature’s evil spirits. Again the history is written by the winners, so that spirits deemed evil could be not so evil after all. Clopotul is representing the Indo-European solar and then Christian civilizations. It’s metal.",
+      "mnemonic": "ONE-in-fif-teen-is-just-one-step-shor-ter-than-one-in-six-teen",
+      "card": "cards/e1-15.webp"
+    },
+    {
+      "id": "e4-15",
+      "k": 4,
+      "n": 15,
+      "versions": [
+        {
+          "file": "audio/e4-15_Duh_Poteca.mp3",
+          "title": "Duh Poteca"
+        }
+      ],
+      "name": "IAMA",
+      "description": "We have an Indian deity among us. Or more likely we and the Hindus have common deities, that originally came riding from the steppe and subsequently became gods for them, and folk spirits for us. Certainly the ones present in the Vedas. Indra, the blond one, is weaponizing thunderbolts just like Zeus, so there must be others too. We also have a Rudra instance here, rain related. Our guy Iama, with an ‘I’, is less important in our pseudo-divinities list than Yama is in the Hindu one. Not that Yama is anywhere close to being a main character, but still. Iama is still responsible with death, but he is concerned only with animals and plants. We have plenty others to take care of the humans.",
+      "mnemonic": "ONE-in-di-an-TWO-in-di-ans-THREE-in-di-ans-FOUR-get-it",
+      "card": "cards/e4-15.webp"
+    },
+    {
+      "id": "e7-15",
+      "k": 7,
+      "n": 15,
+      "versions": [
+        {
+          "file": "audio/e7-15_Duh_Zefir.mp3",
+          "title": "Duh Zefir"
+        }
+      ],
+      "name": "PĂSTORUL LUPILOR",
+      "description": "This guy is the white dot in the black Yin side. The just leader of the warriors. The one that puts them in order. We, the regular people, are the white Yang, usually having a black dot keeping us in check. Both groups act in a feminine manner, lunar, reflecting, coagulating. Wolves and sheep. Both need the masculine thrust of the contrasting dot bouncing in their midst in order to function optimally. To bring balance.",
+      "mnemonic": "BE-_-KIND-_-TO-_-THE-_-HAI-_-RY-_-GUY-_-_",
+      "card": "cards/e7-15.webp"
+    },
+    {
+      "id": "e8-15",
+      "k": 8,
+      "n": 15,
+      "versions": [
+        {
+          "file": "audio/e8-15_Duh_Reverie.mp3",
+          "title": "Duh Reverie"
+        },
+        {
+          "file": "audio/e8-15_Vâlve_FilipiiDeAvril.mp3",
+          "title": "Vâlve FilipiiDeAvril"
+        }
+      ],
+      "name": "FILIPII",
+      "description": "It’s the divine pack. Anthropomorphized wolves celebrated at the end of November and at the end of January. Their leader is The Great Filip or the Limp Filip. The precise days to celebrate their Autumn feast are passed down on the maternal line for each girl. There would be some ban on work on these days. Also by night the shewolves were said to be looking for hot coals to eat. Those that would not eat fire, the symbol of masculinity and virility, would not reproduce that year.",
+      "mnemonic": "FORM-a-GAIN-a-GAIN-a-GAIN-a-GAIN-a-GAIN-a-GAIN-a-TRANS",
+      "card": "cards/e8-15.webp"
+    },
+    {
+      "id": "e11-15",
+      "k": 11,
+      "n": 15,
+      "versions": [
+        {
+          "file": "audio/e11-15_Duh_Rătăcire.mp3",
+          "title": "Duh Rătăcire"
+        },
+        {
+          "file": "audio/e11-15_Vâlve_CorboaicaCardMix.mp3",
+          "title": "Vâlve CorboaicaCardMix"
+        }
+      ],
+      "name": "CORBOAICA",
+      "description": "She is straightforward the bird goddess of death, the guardian of the dead, found in all the corners of Europe. Literally the Raveness. She is transporting the dead back and forth between life and death. She seems to correspond to the Irish Morrigan, except for the emphasis on Morrigan’s nourishing bountiful breasts. Maybe Corboaica’s breasts are equally nourishing but the verses describing her abducting souls don’t mention anything of the sort.",
+      "mnemonic": "MOR-RI-GAN-_-MOR-RI-GAN-_-MOR-RI-GAN-_-MOR-RI-_",
+      "card": "cards/e11-15.webp"
+    },
+    {
+      "id": "e13-15",
+      "k": 13,
+      "n": 15,
+      "versions": [
+        {
+          "file": "audio/e13-15_duh_Uragan.mp3",
+          "title": "duh Uragan"
+        }
+      ],
+      "name": "VOLBURA",
+      "description": "She is the Wind’s sister. He is straightforward and comes blasting through directly, while she is pirouetting like a ballerina. Nothing much to say about her. She is responsible for all the circular currents, be it in air, water, lifting snow or dust or Kansas one story houses. She is better described as a dust devil or one of her siblings — snow devils, ash devils. Not a full-blown tornado, just a little cute one. Still they were seen as bad spirits, demons, and the places where they formed in were deemed unclean, tainted, associated with bad vibes or energies.",
+      "mnemonic": "YOU-LIKE-A-HUR-RI-CANE-_-ROCK-YOU-LIKE-A-HUR-RI-CANE-_",
+      "card": "cards/e13-15.webp"
+    },
+    {
+      "id": "e14-15",
+      "k": 14,
+      "n": 15,
+      "versions": [
+        {
+          "file": "audio/e14-15_Duh_Nimb.mp3",
+          "title": "Duh Nimb"
+        }
+      ],
+      "name": "MAICA PRECISTA",
+      "description": "This Jewish woman’s identity was superimposed over the old Gaia entity found almost everywhere few hundred years ago. In some places she is still lowkey representing some death goddess just like Corboaica. The same process featuring the middle eastern religious stuff overlaid on our local substrate. In her particular case she is here to stay apparently. The meme is strong in this one. What people could do about it is to not call her by her name. It’s this ambiguous antiquated name, that many don’t even know what it points to. An old nickname. Sounds ancient and folky. And that’s fine. ",
+      "mnemonic": "MAI-CA-PRE-CIS-TA-PRE-CIS-TA-PRE-CIS-TA-PRE-CIS-TA-_",
+      "card": "cards/e14-15.webp"
+    },
+    {
+      "id": "e3-16",
+      "k": 3,
+      "n": 16,
+      "versions": [
+        {
+          "file": "audio/e3-16_Duh_Pajură.mp3",
+          "title": "Duh Pajură"
+        }
+      ],
+      "name": "GAIA",
+      "description": "She is the all-mother, the big-seated, big-breasted, all nourishing one. She keeps on giving. She was one of the Primordials, also going by the name of Chthonia. Referenced to her, death is just putting back in where it came from. In our forest based civilization she was associated with these birds that pull the soul out of the dead body.",
+      "mnemonic": "KITE!-_-be-head-the-KITE!-_-be-head-the-KITE!-_-let's-be-head-the",
+      "card": "cards/e3-16.webp"
+    },
+    {
+      "id": "e5-16",
+      "k": 5,
+      "n": 16,
+      "versions": [
+        {
+          "file": "audio/e5-16_Duh_Ecou.mp3",
+          "title": "Duh Ecou"
+        }
+      ],
+      "name": "SPIRIDUȘUL",
+      "description": "He is a small devilish chicken that grants all whishes and asks for your soul in return. He is the Devil incarnate. Can be bought or harvested from an egg. This bad egg must be kept under one’s arm sometimes for 9 days or even 40 days in other accounts. During this time it’s forbidden washing, cutting hair or nails, going to church or into the priest’s house. When said time passes, out comes a tiny black chick that can be kept safely in a bottle. He will ask for your wishes and will grant every single one.",
+      "mnemonic": "TI-to-the-NY-to-the-WEIRD-to-the-BLACK-to-the-CHICK-chick-chick-chick",
+      "card": "cards/e5-16.webp"
+    },
+    {
+      "id": "e7-16",
+      "k": 7,
+      "n": 16,
+      "versions": [
+        {
+          "file": "audio/e7-16_Duh_Furtună.mp3",
+          "title": "Duh Furtună"
+        },
+        {
+          "file": "audio/e7-16_Vâlve_CrivățulIanuarie26.mp3",
+          "title": "Vâlve CrivățulIanuarie26"
+        }
+      ],
+      "name": "CRIVĂȚUL",
+      "description": "The personification of the wind “from the Russians,” blowing from the northeast. The name comes from the Slavic languages and means crooked, wrong, false, guilty. Perfect for a negative character. But it is more nuanced. Like most winds, he is a strong young man associated with the gallop of a horse. Although he often brings unpleasantness, in popular belief he is more positive than negative. He forgives if forgiveness is asked of him, and he brings a good harvest if he blows at Epiphany. Then, when summer comes, he turns into an old man with frosty eyebrows who sits on a chair of ice with his feet in the water. Generally, when we say the wind is blowing, it is said that he goes courting. Always on horseback, always after women.",
+      "mnemonic": "TO-_-BEAT-_-YOU-_-_-NOT-_-TO-_-BEAT-_-YOU-_-_",
+      "card": "cards/e7-16.webp"
+    },
+    {
+      "id": "e9-16",
+      "k": 9,
+      "n": 16,
+      "versions": [
+        {
+          "file": "audio/e9-16_Duh_Legământ.mp3",
+          "title": "Duh Legământ"
+        },
+        {
+          "file": "audio/e9-16_Vâlve_BabaDochia1.mp3",
+          "title": "Vâlve BabaDochia1"
+        }
+      ],
+      "name": "BABA DOCHIA",
+      "description": "The legend goes that Baba Dochia, old age personified, believes the winter had already passed, and wishes to take her sheep back up to the mountain pastures. She has to doublecheck first, so she sends her daughter-in-law into the forest to bring her ripe berries. That’s unheard of at the end of February, so God, Almighty, disguised as an old man, hands the young woman a small pitcher full of berries. That convinces Dochia, and despite all the other shepherds advising against it, she prepares everything for going up the mountain.",
+      "mnemonic": "BA-BA-_-DO-_-CHI-_-A-_-BA-BA-_-DOCH-_-IA-_",
+      "card": "cards/e9-16.webp"
+    },
+    {
+      "id": "e11-16",
+      "k": 11,
+      "n": 16,
+      "versions": [
+        {
+          "file": "audio/e11-16_Duh_Cor.mp3",
+          "title": "Duh Cor"
+        }
+      ],
+      "name": "PRICOLICIUL",
+      "description": "Werewolves. Many stories of husbands travelling with their wives advising them to hit any wolf or hound that will attack them. Then somehow he disappears into the forest, sheds his clothes, turns into said beast, attacks and gets away a bloodied ear or leg. He returns to his wife as a man but she recognizes the wound and finds out this way that he is a pricolici. He needs to shed some blood in order to turn back into a human. Sometimes the dogs bite him, other times the wife or some shepherd cuts him.",
+      "mnemonic": "WER-WOLF-_-WER-WOLF-_-WER-WOLF-_-WER-WOLF-_-PREE-KO-LEACH-_",
+      "card": "cards/e11-16.webp"
+    },
+    {
+      "id": "e13-16",
+      "k": 13,
+      "n": 16,
+      "versions": [
+        {
+          "file": "audio/e13-16_Duh_Stol.mp3",
+          "title": "Duh Stol"
+        }
+      ],
+      "name": "FRUMUȘELELE",
+      "description": "",
+      "mnemonic": "",
+      "card": "cards/e13-16.webp"
+    },
+    {
+      "id": "e15-16",
+      "k": 15,
+      "n": 16,
+      "versions": [
+        {
+          "file": "audio/e15-16_Duh_Înălțare.mp3",
+          "title": "Duh Înălțare"
+        },
+        {
+          "file": "audio/e15-16_Vâlve_Sângiorzul.mp3",
+          "title": "Vâlve Sângiorzul"
+        }
+      ],
+      "name": "SÂNGIORZUL",
+      "description": "Long story short, he is Saint George, but a particular version of him tailored by a people who did not read or write for a long time, and when they finally wrote down his name it was already far gone through the game of telephone. We got a few of those. In Transylvania there is a town called Sângiorz, and also one named Sfântul Gheorghe, meaning the same thing, but snapshots of different moments in the life of the language.",
+      "mnemonic": "RAT-AT-OUILLE-RAT-AT-OUILLE-RAT-AT-OUILLE-RAT-AT-OUILLE-RAT-AT-OUILLE-_",
+      "card": "cards/e15-16.webp"
+    }
+  ]
+}
