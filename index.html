@@ -268,16 +268,14 @@ input[type=range]:focus-visible { outline: 2px solid var(--accent); outline-offs
           <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.4-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></svg>
           <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="5.5" y="4" width="4.5" height="16" rx="1"/><rect x="14" y="4" width="4.5" height="16" rx="1"/></svg>
         </button>
-         <button class="playbtn" id="next" type="button" disabled aria-describedby="lockNote">
-          <svg id="lockIcon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10V8a5 5 0 0 1 10 0v2h1a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h1zm2 0h6V8a3 3 0 0 0-6 0v2z"/></svg>
-          <span id="nextLabel">Next</span>
-        </button>
         <div class="pmeta">
           <div class="clipno" id="clipNo">Ready</div>
-         <!--<div class="time"><span id="elapsed">0:00</span></div>-->
-          
+          <div class="time"><span id="elapsed">0:00</span></div>
         </div>
-         
+         <button class="btn primary" id="next" type="button" disabled aria-describedby="lockNote">
+          <svg id="lockIcon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10V8a5 5 0 0 1 10 0v2h1a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h1zm2 0h6V8a3 3 0 0 0-6 0v2z"/></svg>
+          <span id="nextLabel">Next clip</span>
+        </button>
         <div class="worth">
           <span class="sub" id="worth" aria-label="Points available now">+3</span>
           <span class="sub" id="worthSub">Speed bonus starts when the clip plays.</span>
@@ -312,12 +310,12 @@ input[type=range]:focus-visible { outline: 2px solid var(--accent); outline-offs
       </div>
 
       <div class="nextrow">
-      <!--  <button class="btn primary" id="next" type="button" disabled aria-describedby="lockNote">
+       <!-- <button class="btn primary" id="next" type="button" disabled aria-describedby="lockNote">
           <svg id="lockIcon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10V8a5 5 0 0 1 10 0v2h1a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h1zm2 0h6V8a3 3 0 0 0-6 0v2z"/></svg>
           <span id="nextLabel">Next clip</span>
-        </button>-->
+        </button> -->
         <p class="locknote" id="lockNote">Unlocks when n and k match the clip.</p>
-      </div> 
+      </div>
 
       <article class="reveal" id="reveal" hidden aria-live="polite">
         <div class="eyebrow"><span id="rvEq"></span><span id="rvTitle"></span></div>
