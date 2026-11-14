@@ -270,7 +270,7 @@ input[type=range]:focus-visible { outline: 2px solid var(--accent); outline-offs
         </button>
         <div class="pmeta">
           <div class="clipno" id="clipNo">Ready</div>
-          <div class="time"><span id="elapsed">0:00</span> listening</div>
+          <div class="time"><span id="elapsed">0:00</span></div>
         </div>
         <div class="worth">
           <span class="sub" id="worth" aria-label="Points available now">+3</span>
@@ -300,7 +300,7 @@ input[type=range]:focus-visible { outline: 2px solid var(--accent); outline-offs
       <p class="feedback" id="feedback" role="status" aria-live="polite">Press play to hear the first clip.</p>
 
       <div class="help">
-        <button class="btn" id="hint" type="button" disabled>Hint: show n</button>
+        <button class="btn" id="hint" type="button" disabled>Hint</button>
         <button class="btn" id="giveup" type="button" disabled>Give up</button>
         <div class="misses" id="misses" aria-label="Misses so far"></div>
       </div>
@@ -493,7 +493,7 @@ input[type=range]:focus-visible { outline: 2px solid var(--accent); outline-offs
     audio.src = v.file.split('/').map(encodeURIComponent).join('/');   // each part encoded, so # ? % and non-Latin letters are safe
     const p = audio.play();
     if (p && p.catch) p.catch(() => say('Press play to hear the clip.'));
-    say('Listening. Find the number of steps and pulses in the loop.');
+    say('Find the number of steps and pulses in the loop.');
     render();
   }
 
