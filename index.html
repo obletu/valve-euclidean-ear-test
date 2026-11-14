@@ -129,10 +129,10 @@ h1 { margin: 0; font: 700 clamp(30px, 6vw, 40px)/1 var(--f-display); letter-spac
 .dial { background: var(--surface); border: 1.5px solid var(--line); border-radius: 14px; padding: 18px 18px 16px; display: flex; flex-direction: column; gap: 6px; }
 .dial.shake { animation: shake 0.4s; }
 @keyframes shake { 0%,100% { transform: translateX(0); } 20% { transform: translateX(-7px); } 40% { transform: translateX(6px); } 60% { transform: translateX(-4px); } 80% { transform: translateX(3px); } }
-.row { display: grid; grid-template-columns: 62px minmax(0, 1fr) 58px; align-items: center; gap: 12px; }
+.row { display: grid; grid-template-columns: 52px minmax(0, 1fr) 48px; align-items: center; gap: 12px; }
 .row label { display: flex; flex-direction: column; line-height: 1; }
 .row label b { font: 700 34px/1 var(--f-display); }
-.row label small { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); margin-top: 3px; }
+.row label small { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); margin-top: 3px; }
 .row output { font: 600 40px/1 var(--f-display); text-align: right; font-variant-numeric: tabular-nums; }
 /* both sliders share one pitch (15 positions each), so k's last allowed notch sits right under n's thumb */
 .slider { position: relative; height: 38px; --f: 0; --lim: 1; }
