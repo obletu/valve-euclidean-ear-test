@@ -9,7 +9,7 @@ body { margin: 0; font: 14px system-ui, sans-serif; }
 img { max-width: 100%; }
 [hidden] { display: none !important; }
 </style>
-<title>Euclidean Ear Test</title>
+<title>Vâlve</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -272,10 +272,10 @@ input[type=range]:focus-visible { outline: 2px solid var(--accent); outline-offs
           <div class="clipno" id="clipNo">Ready</div>
           <div class="time"><span id="elapsed">0:00</span> listening</div>
         </div>
-        <div class="worth">
+      <!--<div class="worth">
           <span class="pill" id="worth" aria-label="Points available now">+3</span>
           <span class="sub" id="worthSub">Speed bonus starts when the clip plays.</span>
-        </div>
+        </div>-->
       </div>
 
       <div class="dial" id="dial">
@@ -302,16 +302,20 @@ input[type=range]:focus-visible { outline: 2px solid var(--accent); outline-offs
       <div class="help">
         <button class="btn" id="hint" type="button" disabled>Hint: show n</button>
         <button class="btn" id="giveup" type="button" disabled>Give up</button>
-        <div class="misses" id="misses" aria-label="Misses so far"></div>
+        <!--<div class="misses" id="misses" aria-label="Misses so far"></div>-->
+         <button class="btn primary" id="next" type="button" disabled aria-describedby="lockNote">
+          <svg id="lockIcon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10V8a5 5 0 0 1 10 0v2h1a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h1zm2 0h6V8a3 3 0 0 0-6 0v2z"/></svg>
+          <span id="nextLabel">Next clip</span>
+        </button>
       </div>
 
-      <div class="nextrow">
+     <!-- <div class="nextrow">
         <button class="btn primary" id="next" type="button" disabled aria-describedby="lockNote">
           <svg id="lockIcon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10V8a5 5 0 0 1 10 0v2h1a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h1zm2 0h6V8a3 3 0 0 0-6 0v2z"/></svg>
           <span id="nextLabel">Next clip</span>
         </button>
         <p class="locknote" id="lockNote">Unlocks when n and k match the clip.</p>
-      </div>
+      </div> -->
 
       <article class="reveal" id="reveal" hidden aria-live="polite">
         <div class="eyebrow"><span id="rvEq"></span><span id="rvTitle"></span></div>
