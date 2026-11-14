@@ -268,10 +268,7 @@ input[type=range]:focus-visible { outline: 2px solid var(--accent); outline-offs
           <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.4-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></svg>
           <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="5.5" y="4" width="4.5" height="16" rx="1"/><rect x="14" y="4" width="4.5" height="16" rx="1"/></svg>
         </button>
-        <div class="pmeta">
-          <div class="clipno" id="clipNo">Ready</div>
-          <div class="time"><span id="elapsed">0:00</span></div>
-        </div>
+        
          <button class="btn primary" id="next" type="button" disabled aria-describedby="lockNote">
           <svg id="lockIcon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10V8a5 5 0 0 1 10 0v2h1a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h1zm2 0h6V8a3 3 0 0 0-6 0v2z"/></svg>
           <span id="nextLabel">Next</span>
@@ -311,11 +308,15 @@ input[type=range]:focus-visible { outline: 2px solid var(--accent); outline-offs
           <svg id="lockIcon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10V8a5 5 0 0 1 10 0v2h1a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h1zm2 0h6V8a3 3 0 0 0-6 0v2z"/></svg>
           <span id="nextLabel">Next clip</span>
         </button> -->
-         
-          <span class="sub" id="worth" aria-label="Points available now">+3</span>
+         <div class="pmeta">
+          <div class="clipno" id="clipNo">Ready</div>
+          <div class="time"><span id="elapsed">0:00</span></div>
+        </div>
+         <p class="sub" id="lockNote">Next clip unlocks when n and k match the clip.</p>
+          <span class="pill" id="worth" aria-label="Points available now">+3</span>
           <span class="sub" id="worthSub">Speed bonus starts when the clip plays.</span>
        
-        <p class="sub" id="lockNote">Next clip unlocks when n and k match the clip.</p>
+        
       </div>
 
       <article class="reveal" id="reveal" hidden aria-live="polite">
